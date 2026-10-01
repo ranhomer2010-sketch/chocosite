@@ -88,7 +88,6 @@
 @keyframes orbit-turn { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes orbit-counter { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
 @media (hover: hover) and (pointer: fine) {
-  .orbit-stage:hover .orbit-position, .orbit-stage:hover .orbit-reverse { animation-play-state: paused; }
   .orbit-node:hover .orbit-bubble { transform: scale(1.07); background: var(--blush-deep); }
   .orbit-node:hover .orbit-label { text-decoration: underline; text-underline-offset: 4px; }
 }
