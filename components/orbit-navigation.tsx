@@ -4,12 +4,13 @@ import { SiteAnchor, SiteImg } from "@/components/site-elements";
 
 
 import { useState, type CSSProperties } from "react";
-import { Pause, Play, MapPin, MessageCircle, Wallet, Users, Heart } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Pause, Play, MapPin, MessageCircle, Wallet, Users, Heart, HandHeart, Sparkles } from "lucide-react";
 import { BOOKING_URL } from "@/lib/content";
 
 const sections = [
-  { href: "/massazh", label: "Массаж и SPA", image: "/images/massage-ritual.webp" },
-  { href: "/kosmetologiya", label: "Косметология", image: "/images/cosmetology.webp" },
+  { href: "/massazh", label: "Массаж и SPA", Icon: HandHeart },
+  { href: "/kosmetologiya", label: "Косметология", Icon: Sparkles },
   { href: "/prices", label: "Цены", Icon: Wallet },
   { href: "/specialists", label: "Специалисты", Icon: Users },
   { href: "/reviews", label: "Отзывы", Icon: MessageCircle },
@@ -20,23 +21,23 @@ const sections = [
 
 export function OrbitNavigation() {
   const [paused, setPaused] = useState(false);
+  const isHome = (usePathname().replace(/\/$/, "") || "/") === "/";
+  const logo = <SiteAnchor href="/" aria-label="ВШоколаде, на главную"><SiteImg src="/images/brand-logo.svg" alt="ВШоколаде. Забота о себе" width="340" height="190" /></SiteAnchor>;
   return (
     <section className="orbit-hero" id="navigation" aria-label="ВШоколаде: услуги и разделы сайта">
       <div className={`orbit-stage${paused ? " is-paused" : ""}`} onPointerDown={event => { if (event.pointerType === "touch") setPaused(true); }}>
         <div className="orbit-track" aria-hidden="true" />
         <div className="orbit-core">
-          <h1><SiteImg src="/images/brand-logo.svg" alt="ВШоколаде. Забота о себе" width="340" height="190" /></h1>
+          {isHome ? <h1 className="orbit-logo">{logo}</h1> : <div className="orbit-logo">{logo}</div>}
           <p>Массаж и косметология<br />в Лобне</p>
           <SiteAnchor className="button" href={BOOKING_URL} target="_blank" rel="noreferrer">Онлайн-запись</SiteAnchor>
         </div>
         <nav className="orbit-plane" aria-label="Разделы сайта">
-          {sections.map(({ href, label, image, Icon }, index) => (
+          {sections.map(({ href, label, Icon }, index) => (
             <div className="orbit-position" key={href} style={{ "--phase": `${index * -12}s`, "--angle": `${index * 45}deg` } as CSSProperties}>
               <div className="orbit-reverse">
                 <SiteAnchor href={href} className="orbit-node">
-                  <span className={image ? "orbit-bubble has-image" : "orbit-bubble"}>
-                    {image ? <SiteImg src={image} alt="" width="112" height="112" /> : Icon ? <Icon aria-hidden="true" /> : null}
-                  </span>
+                  <span className="orbit-bubble"><Icon aria-hidden="true" /></span>
                   <span className="orbit-label">{label}</span>
                 </SiteAnchor>
               </div>

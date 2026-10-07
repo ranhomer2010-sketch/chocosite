@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { FloatingBooking } from "@/components/shared";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { OrbitNavigation } from "@/components/orbit-navigation";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function RootLayout({
       </head>
       <body>
         <SiteHeader />
-        <main>{children}</main>
+        <main><OrbitNavigation />{children}</main>
         <SiteFooter />
         <FloatingBooking />
       </body>

@@ -1,2 +1,2 @@
-:HL["/chocosite/_next/static/css/e44d15cf9cd5b082.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"kosmetologiya","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"H6bHRXcjOCZNGb3exBWe7"}
+:HL["/chocosite/_next/static/css/99c91cce7a6522a0.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"kosmetologiya","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"_flJ9oMznTAmFM4MmNF53"}

@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { SiteImage as Image } from "@/components/site-elements";
 import { BookingBand, TextLink } from "@/components/shared";
 import { YandexReviewsWidget } from "@/components/yandex-reviews-widget";
-import { OrbitNavigation } from "@/components/orbit-navigation";
 import { MAPS_URL, trustFacts } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -23,8 +22,6 @@ const popular = [
 export default function HomePage() {
   return (
     <>
-      <OrbitNavigation />
-
       <section className="trust-strip" aria-label="Рейтинг клиники">
         {trustFacts.map((fact) => (
           <div className="trust-item" key={fact.label}>
