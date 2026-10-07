@@ -4,8 +4,29 @@ import { BookingBand, PageHero } from "@/components/shared";
 
 export const metadata: Metadata = {
   title: "Специалисты",
-  description: "Как выбрать специалиста по массажу или косметологии в клинике ВШоколаде. Актуальный состав команды доступен в YCLIENTS.",
+  description: "Массажисты клиники ВШоколаде в Лобне: Ольга, Алексей и Евгений. Услуги и запись в YCLIENTS.",
 };
+
+const specialists = [
+  {
+    name: "Ольга",
+    experience: "3 года опыта",
+    summary: "Классический массаж, массаж лица и антицеллюлитные техники.",
+    details: "Поможет выбрать комфортную интенсивность и формат процедуры.",
+  },
+  {
+    name: "Алексей",
+    experience: "10 лет опыта",
+    summary: "Массажист с медицинским образованием.",
+    details: "Направления и свободное время можно посмотреть при онлайн-записи.",
+  },
+  {
+    name: "Евгений",
+    experience: "24 года опыта",
+    summary: "Массажист с медицинским образованием.",
+    details: "Выполняет основные виды массажа, а также авторский нейроседативный и миоструктурный массаж.",
+  },
+];
 
 const choices = [
   { title: "Нужно расслабиться", text: "Выберите классический или SPA-массаж. Интенсивность можно обсудить перед началом сеанса." },
@@ -19,14 +40,34 @@ export default function SpecialistsPage() {
     <>
       <PageHero
         eyebrow="Команда"
-        title="Специалист под вашу задачу"
-        text="В YCLIENTS отображаются актуальный состав команды, доступные услуги и свободное время каждого специалиста."
+        title="Люди, которым можно доверить отдых"
+        text="Познакомьтесь с массажистами ВШоколаде. Выберите услугу и удобное время в онлайн-записи."
         image="/images/face-massage.webp"
         imageAlt="Специалист проводит массаж лица"
         position="center 42%"
       >
         <SiteAnchor className="button button-outline" href="/reviews">Читать отзывы</SiteAnchor>
       </PageHero>
+
+      <section className="site-container section-pad team-section" aria-labelledby="team-title">
+        <div className="team-heading">
+          <p className="eyebrow">Мастера массажа</p>
+          <h2 id="team-title">Наша команда</h2>
+        </div>
+        <div className="team-grid">
+          {specialists.map((specialist, index) => (
+            <article className="team-card" key={specialist.name}>
+              <span className="team-card-number" aria-hidden="true">0{index + 1}</span>
+              <div>
+                <p className="team-experience">{specialist.experience}</p>
+                <h3>{specialist.name}</h3>
+                <p className="team-summary">{specialist.summary}</p>
+                <p className="team-details">{specialist.details}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section className="site-container section-pad specialist-layout">
         <div className="specialist-intro">

@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: { unoptimized: true },
   env: { NEXT_PUBLIC_BASE_PATH: basePath },
-  experimental: { cpus: 2 },
+  experimental: { cpus: 2, useTypeScriptCli: false },
 };
 
 export default nextConfig;
