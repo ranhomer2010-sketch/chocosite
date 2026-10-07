@@ -618,7 +618,10 @@ summary:focus-visible {
   border-radius: 32px;
   background: var(--blush);
   box-shadow: var(--soft-shadow);
+  transition: transform 220ms var(--ease-out), box-shadow 220ms ease;
 }
+
+.category-card:focus-within { outline: 2px solid var(--rose); outline-offset: 3px; }
 
 .category-card:last-child {
   margin-top: 84px;
@@ -680,6 +683,7 @@ summary:focus-visible {
   display: flex;
   align-items: center;
   padding: clamp(54px, 7vw, 110px);
+  background: url("../public/images/flow-lines.svg") no-repeat left center / 820px auto;
 }
 
 .editorial-copy > div {
@@ -952,7 +956,10 @@ summary:focus-visible {
   flex-direction: column;
   justify-content: center;
   padding: clamp(62px, 7vw, 112px) clamp(28px, 6vw, 96px);
+  background: url("../public/images/orbit-arch.svg") no-repeat left center / 820px auto;
 }
+
+.page-hero-copy--flow { background-image: url("../public/images/flow-lines.svg"); }
 
 .page-hero h1 {
   font-size: clamp(3.4rem, 5.2vw, 5.8rem);
@@ -1199,6 +1206,7 @@ summary:focus-visible {
   padding: clamp(26px, 3vw, 42px);
   border-radius: 26px;
   background: var(--paper-strong);
+  transition: transform 220ms var(--ease-out), box-shadow 220ms ease;
 }
 
 .team-card:nth-child(2) { background: var(--blush); }
@@ -1696,6 +1704,16 @@ summary:focus-visible {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  [data-reveal-ready] {
+    transition: opacity 520ms var(--ease-out), transform 520ms var(--ease-out);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  [data-reveal-ready]:not([data-visible]) {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
   .home-hero-copy-inner,
   .page-hero-copy > * {
     animation: rise-in 720ms cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -1719,7 +1737,18 @@ summary:focus-visible {
   }
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .category-card:hover,
+  .team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 64px rgba(98, 43, 20, 0.16);
+    transition-duration: 220ms;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .category-card:hover,
+  .team-card:hover { transform: none; }
   html {
     scroll-behavior: auto;
   }

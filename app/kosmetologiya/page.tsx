@@ -39,7 +39,7 @@ export default function CosmetologyPage() {
             style={{ objectPosition: "center 36%" }}
           />
         </div>
-        <div className="story-copy">
+        <div className="story-copy" data-reveal>
           <h2>Сначала задача, потом процедура</h2>
           <p>На консультации специалист уточняет состояние кожи, ожидания и возможные ограничения. Так уход получается понятным и обоснованным.</p>
           <div className="story-points">

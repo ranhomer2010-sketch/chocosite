@@ -33,7 +33,7 @@ export default function ReviewsPage() {
       </section>
 
       <section className="site-container section-pad yandex-reviews-section">
-        <div className="yandex-reviews-copy">
+        <div className="yandex-reviews-copy" data-reveal>
           <h2>Отзывы из карточки ВШоколаде</h2>
           <p>Источник, авторы и даты сохраняются внутри официального виджета Яндекс Карт.</p>
           <SiteAnchor className="text-link" href={MAPS_URL} target="_blank" rel="noreferrer">Открыть в Яндексе</SiteAnchor>

@@ -31,7 +31,7 @@ export default function AboutPage() {
 
       <section className="feature-rail">
         {features.map((feature) => (
-          <article key={feature.title}>
+          <article key={feature.title} data-reveal>
             <h3>{feature.title}</h3>
             <p>{feature.text}</p>
           </article>
@@ -48,7 +48,7 @@ export default function AboutPage() {
             style={{ objectPosition: "center 40%" }}
           />
         </div>
-        <div className="story-copy">
+        <div className="story-copy" data-reveal>
           <h2>Забота складывается из деталей</h2>
           <p>Начинаем с запроса, объясняем ход процедуры и оставляем достаточно времени на спокойный прием. Без спешки и лишних обещаний.</p>
           <p>Клиника находится на первом этаже. Вход оборудован пандусом, часть пространства доступна для маломобильных гостей.</p>

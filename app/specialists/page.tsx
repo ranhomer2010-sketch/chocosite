@@ -50,13 +50,13 @@ export default function SpecialistsPage() {
       </PageHero>
 
       <section className="site-container section-pad team-section" aria-labelledby="team-title">
-        <div className="team-heading">
+        <div className="team-heading" data-reveal>
           <p className="eyebrow">Мастера массажа</p>
           <h2 id="team-title">Наша команда</h2>
         </div>
         <div className="team-grid">
           {specialists.map((specialist, index) => (
-            <article className="team-card" key={specialist.name}>
+            <article className="team-card" key={specialist.name} data-reveal>
               <span className="team-card-number" aria-hidden="true">0{index + 1}</span>
               <div>
                 <p className="team-experience">{specialist.experience}</p>
@@ -70,7 +70,7 @@ export default function SpecialistsPage() {
       </section>
 
       <section className="site-container section-pad specialist-layout">
-        <div className="specialist-intro">
+        <div className="specialist-intro" data-reveal>
           <h2>Как выбрать</h2>
           <p>Ориентируйтесь на задачу и процедуру. В форме онлайн-записи останутся только специалисты, которые выполняют выбранную услугу.</p>
         </div>

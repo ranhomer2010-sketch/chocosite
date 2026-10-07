@@ -20,6 +20,7 @@ export function PageHero({
   imageAlt,
   children,
   position = "center",
+  pattern = "orbit",
 }: {
   eyebrow?: string;
   title: string;
@@ -28,10 +29,11 @@ export function PageHero({
   imageAlt: string;
   children?: ReactNode;
   position?: string;
+  pattern?: "orbit" | "flow";
 }) {
   return (
     <section className="page-hero">
-      <div className="page-hero-copy">
+      <div className={`page-hero-copy page-hero-copy--${pattern}`}>
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
         <h1>{title}</h1>
         <p className="page-hero-text">{text}</p>

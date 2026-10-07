@@ -19,6 +19,7 @@ export default function MassagePage() {
         image="/images/massage-ritual.webp"
         imageAlt="Массаж спины в клинике ВШоколаде"
         position="center 44%"
+        pattern="flow"
       >
         <SiteAnchor className="button button-outline" href="/prices">Смотреть цены</SiteAnchor>
       </PageHero>
@@ -40,7 +41,7 @@ export default function MassagePage() {
             style={{ objectPosition: "center 42%" }}
           />
         </div>
-        <div className="story-copy">
+        <div className="story-copy" data-reveal>
           <h2>Начните с того, что хочется чувствовать</h2>
           <p>Легкость в спине, расслабление после насыщенной недели, работа с силуэтом или свежий вид лица. Специалист поможет выбрать технику и длительность.</p>
           <div className="story-points">

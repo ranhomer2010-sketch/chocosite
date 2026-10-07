@@ -32,12 +32,12 @@ export default function HomePage() {
       </section>
 
       <section className="site-container section-pad">
-        <div className="section-heading">
+        <div className="section-heading" data-reveal>
           <h2>Выберите свое направление</h2>
           <p>От расслабляющего ритуала до программы ухода. Начать можно с понятной цели, остальное подскажут специалисты.</p>
         </div>
         <div className="category-grid">
-          <article className="category-card">
+          <article className="category-card" data-reveal>
             <div className="category-media">
               <Image
                 src="/images/massage-ritual.webp"
@@ -53,7 +53,7 @@ export default function HomePage() {
               <SiteAnchor href="/massazh">Смотреть программы</SiteAnchor>
             </div>
           </article>
-          <article className="category-card">
+          <article className="category-card" data-reveal>
             <div className="category-media">
               <Image
                 src="/images/cosmetology.webp"
@@ -74,7 +74,7 @@ export default function HomePage() {
 
       <section className="editorial-section">
         <div className="editorial-copy">
-          <div>
+          <div data-reveal>
             <h2>Место, где не нужно торопиться</h2>
             <p>
               ВШоколаде объединяет массаж и косметологию в одном пространстве. Спокойная атмосфера, внимательный сервис и время, которое действительно принадлежит вам.
@@ -94,7 +94,7 @@ export default function HomePage() {
       </section>
 
       <section className="site-container section-pad popular-layout">
-        <div className="popular-intro">
+        <div className="popular-intro" data-reveal>
           <h2>Популярные процедуры</h2>
           <p>Базовые варианты для первого знакомства. Полный прайс собран на отдельной странице.</p>
           <TextLink href="/prices">Смотреть все цены</TextLink>
@@ -114,7 +114,7 @@ export default function HomePage() {
 
       <section className="reviews-feature">
         <div className="site-container yandex-reviews-section">
-          <div className="yandex-reviews-copy">
+          <div className="yandex-reviews-copy" data-reveal>
             <h2>Отзывы гостей в Яндексе</h2>
             <p>Виджет обновляется автоматически и показывает отзывы прямо из карточки клиники.</p>
             <div className="yandex-rating">
