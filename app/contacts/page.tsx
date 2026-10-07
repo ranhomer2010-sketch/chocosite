@@ -7,9 +7,7 @@ import {
   MAPS_URL,
   PHONE_DISPLAY,
   PHONE_HREF,
-  TELEGRAM_URL,
-  VK_URL,
-  WHATSAPP_URL,
+  TELEGRAM_CHANNEL_URL,
 } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -33,6 +31,10 @@ export default function ContactsPage() {
             <SiteAnchor href={PHONE_HREF}>{PHONE_DISPLAY}</SiteAnchor>
           </section>
           <section>
+            <h2>Мессенджеры</h2>
+            <p>В Telegram и MAX можно написать на номер клиники: {PHONE_DISPLAY}</p>
+          </section>
+          <section>
             <h2>Режим работы</h2>
             <p>Актуальные часы указаны в Яндекс Картах и YCLIENTS</p>
           </section>
@@ -42,9 +44,7 @@ export default function ContactsPage() {
           <SiteAnchor className="button button-outline" href="#route">Как добраться</SiteAnchor>
         </div>
         <div className="contact-socials" aria-label="Социальные сети и мессенджеры">
-          <SiteAnchor href={TELEGRAM_URL} target="_blank" rel="noreferrer">Telegram</SiteAnchor>
-          <SiteAnchor href={WHATSAPP_URL} target="_blank" rel="noreferrer">WhatsApp</SiteAnchor>
-          <SiteAnchor href={VK_URL} target="_blank" rel="noreferrer">ВКонтакте</SiteAnchor>
+          <SiteAnchor href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer">Канал в Telegram</SiteAnchor>
         </div>
       </div>
       <div className="contact-image">

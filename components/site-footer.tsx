@@ -4,9 +4,7 @@ import {
   MAPS_URL,
   PHONE_DISPLAY,
   PHONE_HREF,
-  TELEGRAM_URL,
-  VK_URL,
-  WHATSAPP_URL,
+  TELEGRAM_CHANNEL_URL,
   navigation,
 } from "@/lib/content";
 
@@ -47,9 +45,7 @@ export function SiteFooter() {
             <SiteAnchor href={MAPS_URL} target="_blank" rel="noreferrer">
               Лобненский бульвар, 12
             </SiteAnchor>
-            <SiteAnchor href={TELEGRAM_URL} target="_blank" rel="noreferrer">Telegram</SiteAnchor>
-            <SiteAnchor href={WHATSAPP_URL} target="_blank" rel="noreferrer">WhatsApp</SiteAnchor>
-            <SiteAnchor href={VK_URL} target="_blank" rel="noreferrer">ВКонтакте</SiteAnchor>
+            <SiteAnchor href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer">Канал в Telegram</SiteAnchor>
           </div>
         </div>
       </div>

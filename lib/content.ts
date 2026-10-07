@@ -1,11 +1,9 @@
-export const BOOKING_URL = "https://n458175.yclients.ru/";
+export const BOOKING_URL = "https://n458175.yclients.com/";
 export const MAPS_URL =
   "https://yandex.ru/maps/org/vshokolade/198231269692?si=6vgrv61jhymx7eyt4znqe9xwaw";
 export const PHONE_DISPLAY = "+7 (967) 207-55-50";
 export const PHONE_HREF = "tel:+79672075550";
-export const TELEGRAM_URL = "https://t.me/vshokolade_massage";
-export const WHATSAPP_URL = "https://wa.me/79672075550";
-export const VK_URL = "https://vk.ru/vshokolade_massage";
+export const TELEGRAM_CHANNEL_URL = "https://t.me/vshokolade_clinic";
 
 export const navigation = [
   { href: "/massazh", label: "Массаж" },
@@ -136,8 +134,13 @@ export const cosmetologyGroups: PriceGroup[] = [
     items: [
       { title: "Мезотерапия", price: "от 4 500 ₽" },
       { title: "Биоревитализация", price: "от 12 000 ₽" },
-      { title: "Контурная пластика", price: "от 15 500 ₽" },
-      { title: "Ботулинотерапия", price: "по зонам" },
+      { title: "Контурная пластика Stylage M / Lips", time: "1 мл", price: "18 500 ₽" },
+      { title: "Контурная пластика Pluryal Classic", time: "1 мл", price: "17 000 ₽" },
+      { title: "Контурная пластика Pluryal Volume", time: "1 мл", price: "18 500 ₽" },
+      { title: "Контурная пластика Radiesse — лицо и шея", time: "3 мл", price: "58 000 ₽" },
+      { title: "Ботулинотерапия Dysport", time: "1 ед.", price: "200 ₽" },
+      { title: "Ботулинотерапия Релатокс", time: "1 ед.", price: "450 ₽" },
+      { title: "Ботулинотерапия Миотокс", time: "1 ед.", price: "450 ₽" },
       { title: "Липолитики", time: "30 мин", price: "от 4 500 ₽" },
     ],
   },
