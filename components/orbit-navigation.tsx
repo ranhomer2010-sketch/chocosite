@@ -24,13 +24,14 @@ export function OrbitNavigation() {
   const isHome = (usePathname().replace(/\/$/, "") || "/") === "/";
   const logo = <SiteAnchor href="/" aria-label="ВШоколаде, на главную"><SiteImg src="/images/brand-logo.svg" alt="ВШоколаде. Забота о себе" width="340" height="190" /></SiteAnchor>;
   return (
-    <section className="orbit-hero" id="navigation" aria-label="ВШоколаде: услуги и разделы сайта">
+    <section className={`orbit-hero${isHome ? " is-home" : ""}`} id="navigation" aria-label="ВШоколаде: услуги и разделы сайта">
       <div className={`orbit-stage${paused ? " is-paused" : ""}`} onPointerDown={event => { if (event.pointerType === "touch") setPaused(true); }}>
         <div className="orbit-track" aria-hidden="true" />
         <div className="orbit-core">
           {isHome ? <h1 className="orbit-logo">{logo}</h1> : <div className="orbit-logo">{logo}</div>}
           <p>Массаж и косметология<br />в Лобне</p>
           <SiteAnchor className="button" href={BOOKING_URL} target="_blank" rel="noreferrer">Онлайн-запись</SiteAnchor>
+          {isHome && <span className="orbit-instruction">Выберите интересующий вас раздел</span>}
         </div>
         <nav className="orbit-plane" aria-label="Разделы сайта">
           {sections.map(({ href, label, Icon }, index) => (

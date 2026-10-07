@@ -54,6 +54,8 @@
 .orbit-header { backdrop-filter: none; -webkit-backdrop-filter: none; background: var(--paper); }
 .sections-link { text-decoration: underline; text-underline-offset: 5px; font-size: 0.9rem; }
 .orbit-hero { background: var(--paper-strong); overflow: clip; scroll-margin-top: 74px; }
+.orbit-hero.is-home { display: flex; flex-direction: column; min-height: 100svh; }
+.orbit-hero.is-home .orbit-stage { flex-grow: 1; }
 .orbit-stage { --orbit-radius: 248px; --orbit-stretch: 1.65; --orbit-inverse: 0.60606; position: relative; width: min(100%, 1240px); height: 660px; margin-inline: auto; }
 .orbit-track { pointer-events: none; position: absolute; width: calc(var(--orbit-radius) * 2); height: calc(var(--orbit-radius) * 2); left: 50%; top: 50%; transform: translate(-50%, -50%) scaleX(var(--orbit-stretch)); border: 1px solid var(--line); border-radius: 50%; }
 .orbit-plane { position: absolute; inset: 0; transform: scaleX(var(--orbit-stretch)); pointer-events: none; }
@@ -67,6 +69,8 @@
 .orbit-logo { margin: 0; }
 .orbit-logo img { display: block; width: 310px; height: auto; margin-inline: auto; filter: brightness(0.32) sepia(0.25); }
 .orbit-core p { margin: 18px 0 24px; color: var(--muted); font-size: 1.1rem; line-height: 1.45; }
+.orbit-instruction { position: relative; display: block; width: max-content; max-width: 100%; margin: 18px auto 0; padding: 12px 18px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: var(--soft-shadow); color: var(--rose-dark); font-size: 0.9rem; line-height: 1.35; animation: orbit-instruction-in 650ms var(--ease-out) 450ms both; }
+@keyframes orbit-instruction-in { from { opacity: 0; transform: translateY(12px) scale(0.94); } to { opacity: 1; transform: translateY(0) scale(1); } }
 .orbit-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; padding-block: 8px 24px; font-size: 0.875rem; color: var(--muted); }
 .orbit-bottom p { margin: 0; }
 .orbit-pause { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 0; border: 0; background: transparent; color: var(--ink); font: inherit; cursor: pointer; }
@@ -116,6 +120,7 @@ input:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
   .orbit-core { width: 160px; }
   .orbit-logo img { width: 155px; }
   .orbit-core p { font-size: 0.875rem; margin: 10px 0 0; }
+  .orbit-instruction { margin-top: 12px; padding: 8px 10px; border-radius: 12px; font-size: 0.72rem; }
   .orbit-core > .button { display: none; }
   .orbit-bottom .orbit-mobile-booking { display: inline-flex; width: 100%; }
   .orbit-bottom { justify-content: center; text-align: center; gap: 10px; padding-bottom: 24px; }
@@ -126,6 +131,7 @@ input:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
   .widget-consent .button, .route-controls .button { white-space: normal; line-height: 1.3; padding-block: 14px; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .orbit-instruction { animation: none; }
   .orbit-position { animation: none; transform: rotate(var(--angle)); }
   .orbit-reverse { animation: none; transform: rotate(calc(-1 * var(--angle))); }
   .orbit-pause { display: none; }

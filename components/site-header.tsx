@@ -1,7 +1,12 @@
+"use client";
+
 import { SiteAnchor } from "@/components/site-elements";
+import { usePathname } from "next/navigation";
 import { BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/content";
 
 export function SiteHeader() {
+  if ((usePathname().replace(/\/$/, "") || "/") === "/") return null;
+
   return (
     <header className="site-header orbit-header">
       <div className="site-container header-inner">
