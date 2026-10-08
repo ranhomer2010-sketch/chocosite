@@ -58,6 +58,19 @@
 .sections-link { text-decoration: underline; text-underline-offset: 5px; font-size: 0.9rem; }
 .orbit-hero { background: var(--paper-strong); overflow: clip; scroll-margin-top: 74px; }
 .page-content-anchor { scroll-margin-top: 74px; }
+.navigation-hint { position: fixed; z-index: 38; bottom: 22px; left: 50%; width: max-content; max-width: calc(100vw - 32px); padding: 13px 20px; transform: translateX(-50%); border: 1px solid rgba(255, 250, 248, 0.3); border-radius: 999px; background: var(--rose-dark); color: #fffaf8; box-shadow: 0 16px 38px rgba(73, 29, 13, 0.24); font-size: 0.9rem; text-align: center; pointer-events: none; animation: hint-appear 220ms var(--ease-out) both; }
+.navigation-hint span { margin-right: 5px; font-size: 1.1rem; }
+@keyframes hint-appear { from { opacity: 0; translate: 0 10px; } to { opacity: 1; translate: 0 0; } }
+@media (max-width: 700px) { .navigation-hint { bottom: 18px; padding: 12px 16px; font-size: 0.82rem; } }
+.analytics-consent { position: fixed; z-index: 50; bottom: 20px; left: 50%; display: flex; width: min(960px, calc(100vw - 32px)); align-items: center; justify-content: space-between; gap: 28px; padding: 22px 26px; transform: translateX(-50%); border: 1px solid var(--line); border-radius: 22px; background: var(--paper); box-shadow: 0 22px 80px rgba(73, 29, 13, 0.22); }
+.analytics-consent strong { display: block; margin-bottom: 5px; color: var(--ink); }
+.analytics-consent p { max-width: 55ch; margin: 0; color: var(--muted); font-size: 0.87rem; line-height: 1.45; }
+.analytics-consent p a, .footer-settings-link { text-decoration: underline; text-underline-offset: 3px; }
+.analytics-actions { display: flex; flex: 0 0 auto; gap: 9px; }
+.analytics-actions .button { min-height: 44px; padding-inline: 17px; font-size: 0.83rem; cursor: pointer; }
+.footer-settings-link { padding: 0; border: 0; background: transparent; color: inherit; font: inherit; font-size: 0.76rem; cursor: pointer; }
+.footer-policy-links { display: flex; flex-wrap: wrap; gap: 10px 20px; }
+@media (max-width: 760px) { .analytics-consent { bottom: 12px; flex-direction: column; align-items: stretch; gap: 18px; padding: 20px; } .analytics-actions { flex-wrap: wrap; } .analytics-actions .button { flex: 1 1 auto; } }
 .orbit-hero.is-home { display: flex; flex-direction: column; min-height: 100svh; }
 .orbit-hero.is-home .orbit-stage { flex-grow: 1; }
 .orbit-stage { --orbit-radius: 248px; --orbit-stretch: 1.65; --orbit-inverse: 0.60606; position: relative; width: min(100%, 1240px); height: 660px; margin-inline: auto; }

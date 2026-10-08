@@ -1,4 +1,5 @@
 import { SiteAnchor } from "@/components/site-elements";
+import { AnalyticsSettingsLink } from "@/components/analytics-settings-link";
 import {
   BOOKING_URL,
   MAPS_URL,
@@ -51,7 +52,10 @@ export function SiteFooter() {
       </div>
       <div className="site-container footer-bottom">
         <span>© {new Date().getFullYear()} ВШоколаде</span>
-        <SiteAnchor href="/privacy">Обработка данных</SiteAnchor>
+        <div className="footer-policy-links">
+          <SiteAnchor href="/privacy">Обработка данных</SiteAnchor>
+          <AnalyticsSettingsLink />
+        </div>
         <span>Имеются противопоказания. Необходима консультация специалиста.</span>
       </div>
     </footer>
