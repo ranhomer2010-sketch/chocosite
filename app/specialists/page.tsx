@@ -46,7 +46,7 @@ export default function SpecialistsPage() {
         imageAlt="Специалист проводит массаж лица"
         position="center 42%"
       >
-        <SiteAnchor className="button button-outline" href="/reviews">Читать отзывы</SiteAnchor>
+        <SiteAnchor className="button button-outline" href="/reviews#content">Читать отзывы</SiteAnchor>
       </PageHero>
 
       <section className="site-container section-pad team-section" aria-labelledby="team-title">

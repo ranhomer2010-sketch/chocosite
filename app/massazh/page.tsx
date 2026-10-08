@@ -21,7 +21,7 @@ export default function MassagePage() {
         position="center 44%"
         pattern="flow"
       >
-        <SiteAnchor className="button button-outline" href="/prices">Смотреть цены</SiteAnchor>
+        <SiteAnchor className="button button-outline" href="#prices-list">Смотреть цены</SiteAnchor>
       </PageHero>
 
       <nav className="site-container price-nav" aria-label="Разделы массажа">
@@ -53,7 +53,7 @@ export default function MassagePage() {
         </div>
       </section>
 
-      <div className="site-container price-sections">
+      <div className="site-container price-sections" id="prices-list">
         {massageGroups.map((group) => <PriceGroupBlock group={group} key={group.id} />)}
 
         <section className="price-group" id="subscriptions">

@@ -33,7 +33,7 @@ export default function RootLayout({
       </head>
       <body>
         <SiteHeader />
-        <main><OrbitNavigation />{children}</main>
+        <main><OrbitNavigation /><div id="content" className="page-content-anchor">{children}</div></main>
         <ScrollReveals />
         <SiteFooter />
         <FloatingBooking />

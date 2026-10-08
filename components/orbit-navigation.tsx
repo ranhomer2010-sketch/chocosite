@@ -5,17 +5,16 @@ import { SiteAnchor, SiteImg } from "@/components/site-elements";
 
 import { useState, type CSSProperties } from "react";
 import { usePathname } from "next/navigation";
-import { Pause, Play, MapPin, MessageCircle, Wallet, Users, Heart, HandHeart, Sparkles } from "lucide-react";
+import { Pause, Play, MapPin, MessageCircle, Users, Heart, HandHeart, Sparkles } from "lucide-react";
 import { BOOKING_URL } from "@/lib/content";
 
 const sections = [
-  { href: "/massazh", label: "Массаж и SPA", Icon: HandHeart },
-  { href: "/kosmetologiya", label: "Косметология", Icon: Sparkles },
-  { href: "/prices", label: "Цены", Icon: Wallet },
-  { href: "/specialists", label: "Специалисты", Icon: Users },
-  { href: "/reviews", label: "Отзывы", Icon: MessageCircle },
-  { href: "/contacts", label: "Контакты", Icon: MapPin },
-  { href: "/about", label: "О клинике", Icon: Heart },
+  { href: "/prices#massage-prices", label: "Цены на массаж и SPA", Icon: HandHeart },
+  { href: "/prices#cosmetology-prices", label: "Цены на косметологию", Icon: Sparkles },
+  { href: "/specialists#content", label: "Специалисты", Icon: Users },
+  { href: "/reviews#content", label: "Отзывы", Icon: MessageCircle },
+  { href: "/contacts#content", label: "Контакты", Icon: MapPin },
+  { href: "/about#content", label: "О клинике", Icon: Heart },
   { href: "/contacts#route", label: "Как добраться", Icon: MapPin },
 ];
 
@@ -35,7 +34,7 @@ export function OrbitNavigation() {
         </div>
         <nav className="orbit-plane" aria-label="Разделы сайта">
           {sections.map(({ href, label, Icon }, index) => (
-            <div className="orbit-position" key={href} style={{ "--phase": `${index * -12}s`, "--angle": `${index * 45}deg` } as CSSProperties}>
+            <div className="orbit-position" key={href} style={{ "--phase": `${index * -96 / sections.length}s`, "--angle": `${index * 360 / sections.length}deg` } as CSSProperties}>
               <div className="orbit-reverse">
                 <SiteAnchor href={href} className="orbit-node">
                   <span className="orbit-bubble"><Icon aria-hidden="true" /></span>

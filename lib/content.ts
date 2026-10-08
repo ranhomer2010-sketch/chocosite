@@ -6,12 +6,11 @@ export const PHONE_HREF = "tel:+79672075550";
 export const TELEGRAM_CHANNEL_URL = "https://t.me/vshokolade_clinic";
 
 export const navigation = [
-  { href: "/massazh", label: "Массаж" },
-  { href: "/kosmetologiya", label: "Косметология" },
-  { href: "/prices", label: "Цены" },
-  { href: "/specialists", label: "Специалисты" },
-  { href: "/reviews", label: "Отзывы" },
-  { href: "/contacts", label: "Контакты" },
+  { href: "/prices#massage-prices", label: "Цены на массаж и SPA" },
+  { href: "/prices#cosmetology-prices", label: "Цены на косметологию" },
+  { href: "/specialists#content", label: "Специалисты" },
+  { href: "/reviews#content", label: "Отзывы" },
+  { href: "/contacts#content", label: "Контакты" },
 ] as const;
 
 export type PriceItem = {

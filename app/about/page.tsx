@@ -26,7 +26,7 @@ export default function AboutPage() {
         imageAlt="Спокойная атмосфера клиники"
         position="center 28%"
       >
-        <SiteAnchor className="button button-outline" href="/contacts">Контакты</SiteAnchor>
+        <SiteAnchor className="button button-outline" href="/contacts#content">Контакты</SiteAnchor>
       </PageHero>
 
       <section className="feature-rail">
@@ -52,7 +52,7 @@ export default function AboutPage() {
           <h2>Забота складывается из деталей</h2>
           <p>Начинаем с запроса, объясняем ход процедуры и оставляем достаточно времени на спокойный прием. Без спешки и лишних обещаний.</p>
           <p>Клиника находится на первом этаже. Вход оборудован пандусом, часть пространства доступна для маломобильных гостей.</p>
-          <SiteAnchor className="text-link" href="/specialists">Как выбрать специалиста</SiteAnchor>
+          <SiteAnchor className="text-link" href="/specialists#content">Как выбрать специалиста</SiteAnchor>
         </div>
       </section>
 

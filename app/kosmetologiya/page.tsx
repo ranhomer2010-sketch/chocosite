@@ -20,7 +20,7 @@ export default function CosmetologyPage() {
         imageAlt="Косметологическая процедура для лица"
         position="center 34%"
       >
-        <SiteAnchor className="button button-outline" href="/prices">Смотреть цены</SiteAnchor>
+        <SiteAnchor className="button button-outline" href="#prices-list">Смотреть цены</SiteAnchor>
       </PageHero>
 
       <nav className="site-container price-nav" aria-label="Разделы косметологии">
@@ -51,7 +51,7 @@ export default function CosmetologyPage() {
         </div>
       </section>
 
-      <div className="site-container price-sections">
+      <div className="site-container price-sections" id="prices-list">
         {cosmetologyGroups.map((group) => <PriceGroupBlock group={group} key={group.id} />)}
       </div>
 

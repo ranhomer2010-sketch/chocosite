@@ -50,7 +50,7 @@ export default function HomePage() {
             <div className="category-copy">
               <h3>Массаж и SPA</h3>
               <p>Классические, расслабляющие, корректирующие и авторские техники.</p>
-              <SiteAnchor href="/massazh">Смотреть программы</SiteAnchor>
+              <SiteAnchor href="/massazh#content">Смотреть программы</SiteAnchor>
             </div>
           </article>
           <article className="category-card" data-reveal>
@@ -66,7 +66,7 @@ export default function HomePage() {
             <div className="category-copy">
               <h3>Косметология</h3>
               <p>Эстетические и инъекционные процедуры с предварительной консультацией.</p>
-              <SiteAnchor href="/kosmetologiya">Выбрать процедуру</SiteAnchor>
+              <SiteAnchor href="/kosmetologiya#content">Выбрать процедуру</SiteAnchor>
             </div>
           </article>
         </div>
@@ -79,7 +79,7 @@ export default function HomePage() {
             <p>
               ВШоколаде объединяет массаж и косметологию в одном пространстве. Спокойная атмосфера, внимательный сервис и время, которое действительно принадлежит вам.
             </p>
-            <TextLink href="/about">Узнать о клинике</TextLink>
+            <TextLink href="/about#content">Узнать о клинике</TextLink>
           </div>
         </div>
         <div className="editorial-media">
@@ -97,7 +97,7 @@ export default function HomePage() {
         <div className="popular-intro" data-reveal>
           <h2>Популярные процедуры</h2>
           <p>Базовые варианты для первого знакомства. Полный прайс собран на отдельной странице.</p>
-          <TextLink href="/prices">Смотреть все цены</TextLink>
+          <TextLink href="/prices#content">Смотреть все цены</TextLink>
         </div>
         <div className="popular-list">
           {popular.map((item) => (

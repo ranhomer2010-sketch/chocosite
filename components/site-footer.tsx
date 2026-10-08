@@ -34,7 +34,7 @@ export function SiteFooter() {
                 {item.label}
               </SiteAnchor>
             ))}
-            <SiteAnchor href="/about">О клинике</SiteAnchor>
+            <SiteAnchor href="/about#content">О клинике</SiteAnchor>
           </div>
         </div>
 
