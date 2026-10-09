@@ -85,7 +85,7 @@
 .orbit-core { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; width: 330px; text-align: center; }
 .orbit-logo { margin: 0; }
 .orbit-logo img { display: block; width: 310px; height: auto; margin-inline: auto; filter: brightness(0.32) sepia(0.25); }
-.orbit-core p { margin: 18px 0 24px; color: var(--muted); font-size: 1.1rem; line-height: 1.45; }
+.orbit-core p { margin: 18px 0 24px; color: var(--muted); font-size: 0.97rem; line-height: 1.35; }
 .orbit-channel { display: block; width: max-content; max-width: 100%; margin: 14px auto 0; color: var(--rose-dark); font-size: 0.83rem; text-decoration: underline; text-underline-offset: 4px; }
 .orbit-instruction { position: relative; display: block; width: max-content; max-width: 100%; margin: 18px auto 0; padding: 12px 18px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: var(--soft-shadow); color: var(--rose-dark); font-size: 0.9rem; line-height: 1.35; animation: orbit-instruction-in 650ms var(--ease-out) 450ms both; }
 @keyframes orbit-instruction-in { from { opacity: 0; transform: translateY(12px) scale(0.94); } to { opacity: 1; transform: translateY(0) scale(1); } }
@@ -139,7 +139,7 @@ input:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
   .orbit-label { font-size: 0.875rem; padding: 2px 0; }
   .orbit-core { width: 160px; }
   .orbit-logo img { width: 155px; }
-  .orbit-core p { font-size: 0.875rem; margin: 10px 0 0; }
+  .orbit-core p { font-size: 0.71rem; line-height: 1.3; margin: 10px 0 0; }
   .orbit-channel { display: none; }
   .orbit-bottom-channel { display: inline; text-decoration: underline; text-underline-offset: 3px; font-size: 0.83rem; }
   .orbit-instruction { margin-top: 12px; padding: 8px 10px; border-radius: 12px; font-size: 0.72rem; }
@@ -1049,37 +1049,72 @@ summary:focus-visible {
   .price-direction-copy { padding: clamp(30px, 7vw, 60px); }
 }
 
+.price-switcher { padding-block: 30px 10px; scroll-margin-top: 90px; }
+
 .price-nav {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  padding-block: 24px;
-  scrollbar-width: none;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.price-nav::-webkit-scrollbar {
-  display: none;
-}
+.price-nav:has(> :nth-child(4):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
-.price-nav a {
-  flex: 0 0 auto;
-  padding: 11px 17px;
+.price-nav button {
+  display: grid;
+  place-items: center;
+  min-height: 64px;
+  width: 100%;
+  padding: 12px 16px;
   border: 1px solid var(--line);
   border-radius: 999px;
+  background: transparent;
   color: var(--muted);
-  font-size: 0.86rem;
-  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
 
-.price-nav a:hover {
+.price-nav button:hover {
   border-color: var(--rose);
   background: var(--paper-strong);
   color: var(--rose-dark);
 }
 
+.price-nav button.is-active {
+  border-color: var(--rose-dark);
+  background: var(--booking-gradient);
+  color: var(--paper);
+  box-shadow: 0 10px 28px rgba(98, 43, 20, 0.18);
+}
+
+.price-nav button:focus-visible { outline: 3px solid var(--caramel); outline-offset: 3px; }
+
 .price-sections {
-  padding-block: clamp(50px, 7vw, 100px);
+  padding-block: clamp(24px, 4vw, 55px) clamp(50px, 7vw, 100px);
   scroll-margin-top: 86px;
+}
+
+.price-panel { animation: price-panel-in 420ms var(--ease-out) both; }
+@keyframes price-panel-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1000px) {
+  .price-nav, .price-nav:has(> :nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .price-nav button:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+@media (max-width: 480px) {
+  .price-nav { gap: 8px; }
+  .price-nav button { min-height: 58px; padding: 9px; font-size: 0.78rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .price-panel { animation: none; }
 }
 
 .price-group {

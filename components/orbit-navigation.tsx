@@ -28,7 +28,7 @@ export function OrbitNavigation() {
         <div className="orbit-track" aria-hidden="true" />
         <div className="orbit-core">
           {isHome ? <h1 className="orbit-logo">{logo}</h1> : <div className="orbit-logo">{logo}</div>}
-          <p>Массаж и косметология<br />в Лобне</p>
+          <p>Профессиональный Массаж<br />и Лицензированная Косметология<br />в Лобне</p>
           <SiteAnchor className="button" href={BOOKING_URL} target="_blank" rel="noreferrer">Онлайн-запись</SiteAnchor>
           {isHome && <SiteAnchor className="orbit-channel" href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer">Канал клиники в Telegram ↗</SiteAnchor>}
           {isHome && <span className="orbit-instruction">Выберите интересующий вас раздел</span>}
