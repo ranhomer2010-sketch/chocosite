@@ -90,6 +90,7 @@
 .orbit-instruction { position: relative; display: block; width: max-content; max-width: 100%; margin: 18px auto 0; padding: 12px 18px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: var(--soft-shadow); color: var(--rose-dark); font-size: 0.9rem; line-height: 1.35; animation: orbit-instruction-in 650ms var(--ease-out) 450ms both; }
 @keyframes orbit-instruction-in { from { opacity: 0; transform: translateY(12px) scale(0.94); } to { opacity: 1; transform: translateY(0) scale(1); } }
 .orbit-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; padding-block: 8px 24px; font-size: 0.875rem; color: var(--muted); }
+@media (min-width: 761px) { .orbit-bottom { padding-right: clamp(280px, 22vw, 330px); } }
 .orbit-bottom p { margin: 0; }
 .orbit-pause { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 0; border: 0; background: transparent; color: var(--ink); font: inherit; cursor: pointer; }
 .orbit-bottom .orbit-mobile-booking { display: none; }
@@ -144,7 +145,7 @@ input:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
   .orbit-instruction { margin-top: 12px; padding: 8px 10px; border-radius: 12px; font-size: 0.72rem; }
   .orbit-core > .button { display: none; }
   .orbit-bottom .orbit-mobile-booking { display: inline-flex; width: 100%; }
-  .orbit-bottom { justify-content: center; text-align: center; gap: 10px; padding-bottom: 24px; }
+  .orbit-bottom { justify-content: center; text-align: center; gap: 10px; padding-bottom: 100px; }
   .orbit-bottom p { width: 100%; margin-top: 8px; }
   .route-layout { grid-template-columns: 1fr; }
   .route-map { min-height: 470px; }
