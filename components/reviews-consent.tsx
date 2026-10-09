@@ -22,8 +22,8 @@ export function ReviewsConsent() {
         <MessageCircle size={32} aria-hidden="true" />
         <h3>Отзывы из Яндекс Карт</h3>
         <p>Виджет загрузится только с вашего разрешения. Яндекс получит IP-адрес и сведения о браузере и может использовать cookies.</p>
-        <label className="consent-checkbox"><input type="checkbox" checked={checked} onChange={e => setChecked(e.target.checked)} /><span>Разрешаю загрузку отзывов и передачу технических данных Яндексу.</span></label>
-        <SiteAnchor className="consent-details" href="/privacy#yandex">Подробнее об обработке данных</SiteAnchor>
+        <label className="consent-checkbox"><input type="checkbox" checked={checked} onChange={e => setChecked(e.target.checked)} /><span>Даю согласие на обработку технических данных для загрузки отзывов Яндекса.</span></label>
+        <SiteAnchor className="consent-details" href="/consent#reviews" target="_blank" rel="noreferrer">Условия согласия и cookies</SiteAnchor>
         <button className="button" type="button" disabled={!checked} onClick={() => setAllowed(true)}>Показать отзывы</button>
         <noscript>Для загрузки виджета включите JavaScript. Отзывы также доступны в карточке клиники на Яндекс Картах.</noscript>
       </div>}

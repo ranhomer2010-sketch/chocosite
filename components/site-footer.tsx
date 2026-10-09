@@ -6,6 +6,13 @@ import {
   PHONE_DISPLAY,
   PHONE_HREF,
   TELEGRAM_CHANNEL_URL,
+  TELEGRAM_CHAT_URL,
+  COMPANY_NAME,
+  COMPANY_INN,
+  COMPANY_OGRN,
+  SOLE_TRADER_NAME,
+  SOLE_TRADER_INN,
+  SOLE_TRADER_OGRNIP,
   navigation,
 } from "@/lib/content";
 
@@ -47,13 +54,20 @@ export function SiteFooter() {
               Лобненский бульвар, 12
             </SiteAnchor>
             <SiteAnchor href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer">Канал в Telegram</SiteAnchor>
+            <SiteAnchor href={TELEGRAM_CHAT_URL} target="_blank" rel="noreferrer">Написать в Telegram</SiteAnchor>
           </div>
         </div>
+      </div>
+      <div className="site-container footer-legal" aria-label="Реквизиты исполнителей">
+        <p><strong>{COMPANY_NAME}</strong> · ИНН {COMPANY_INN} · ОГРН {COMPANY_OGRN}<br /><span>Медицинская деятельность по лицензии № Л041-01162-50/04066667.</span></p>
+        <p><strong>{SOLE_TRADER_NAME}</strong> · ИНН {SOLE_TRADER_INN} · ОГРНИП {SOLE_TRADER_OGRNIP}<br /><span>Исполнитель услуги указывается при записи и в договоре.</span></p>
       </div>
       <div className="site-container footer-bottom">
         <span>© {new Date().getFullYear()} ВШоколаде</span>
         <div className="footer-policy-links">
-          <SiteAnchor href="/privacy">Обработка данных</SiteAnchor>
+          <SiteAnchor href="/privacy">Политика обработки данных</SiteAnchor>
+          <SiteAnchor href="/consent">Согласия</SiteAnchor>
+          <SiteAnchor href="/cookies">Cookies</SiteAnchor>
           <AnalyticsSettingsLink />
         </div>
         <span>Имеются противопоказания. Необходима консультация специалиста.</span>

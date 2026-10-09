@@ -2,6 +2,7 @@ import { SiteAnchor } from "@/components/site-elements";
 import type { Metadata } from "next";
 import { SiteImage as Image } from "@/components/site-elements";
 import { BookingBand, PageHero } from "@/components/shared";
+import { PHONE_DISPLAY, PHONE_HREF, TELEGRAM_CHANNEL_URL, TELEGRAM_CHAT_URL } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "О клинике",
@@ -53,6 +54,15 @@ export default function AboutPage() {
           <p>Начинаем с запроса, объясняем ход процедуры и оставляем достаточно времени на спокойный прием. Без спешки и лишних обещаний.</p>
           <p>Клиника находится на первом этаже. Вход оборудован пандусом, часть пространства доступна для маломобильных гостей.</p>
           <SiteAnchor className="text-link" href="/specialists#content">Как выбрать специалиста</SiteAnchor>
+        </div>
+      </section>
+
+      <section className="site-container about-connect" data-reveal>
+        <h2>Связь с клиникой</h2>
+        <p>Для записи и вопросов позвоните по номеру <SiteAnchor className="text-link" href={PHONE_HREF}>{PHONE_DISPLAY}</SiteAnchor> или напишите в Telegram на этот же номер. Новости и предложения публикуем в канале клиники.</p>
+        <div className="hero-actions">
+          <SiteAnchor className="button button-outline" href={TELEGRAM_CHAT_URL} target="_blank" rel="noreferrer">Написать в Telegram</SiteAnchor>
+          <SiteAnchor className="text-link" href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer">Канал ВШоколаде в Telegram ↗</SiteAnchor>
         </div>
       </section>
 

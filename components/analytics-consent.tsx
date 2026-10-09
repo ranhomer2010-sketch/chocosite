@@ -76,8 +76,8 @@ function AnalyticsConsentActive({ id }: { id: number }) {
   return (
     <aside className="analytics-consent" aria-label="Настройки аналитики">
       <div>
-        <strong>Аналитика посещений</strong>
-        <p>С вашего разрешения загрузим Яндекс Метрику. Она использует cookies и передаёт Яндексу сведения о посещении. Без разрешения счётчик не работает. <SiteAnchor href="/privacy#analytics">Подробнее</SiteAnchor></p>
+        <strong>Аналитические cookies</strong>
+        <p>С вашего разрешения загрузим Яндекс Метрику. Она использует cookies и передаёт Яндексу сведения о посещении. Без разрешения счётчик не работает. <SiteAnchor href="/consent#analytics">Условия согласия</SiteAnchor> · <SiteAnchor href="/cookies">О cookies</SiteAnchor></p>
       </div>
       <div className="analytics-actions">
         <button className="button button-outline" type="button" onClick={() => decide("rejected")}>Не разрешать</button>

@@ -8,6 +8,7 @@ import {
   PHONE_DISPLAY,
   PHONE_HREF,
   TELEGRAM_CHANNEL_URL,
+  TELEGRAM_CHAT_URL,
 } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default function ContactsPage() {
           <section>
             <h2>Мессенджеры</h2>
             <p>В Telegram и MAX можно написать на номер клиники: {PHONE_DISPLAY}</p>
+            <SiteAnchor className="text-link" href={TELEGRAM_CHAT_URL} target="_blank" rel="noreferrer">Написать в Telegram ↗</SiteAnchor>
           </section>
           <section>
             <h2>Режим работы</h2>

@@ -4,6 +4,14 @@ export const MAPS_URL =
 export const PHONE_DISPLAY = "+7 (967) 207-55-50";
 export const PHONE_HREF = "tel:+79672075550";
 export const TELEGRAM_CHANNEL_URL = "https://t.me/vshokolade_clinic";
+export const TELEGRAM_CHAT_URL = "https://t.me/+79672075550";
+export const COMPANY_NAME = "ООО «ВШоколаде»";
+export const COMPANY_INN = "9713031270";
+export const COMPANY_OGRN = "1257700463756";
+export const COMPANY_ADDRESS = "127411, г. Москва, ул. Долгопрудная, д. 11, кв. 18";
+export const SOLE_TRADER_NAME = "ИП Аксёнова Ирина Леонидовна";
+export const SOLE_TRADER_INN = "771301697422";
+export const SOLE_TRADER_OGRNIP = "322774600431303";
 
 export const navigation = [
   { href: "/prices#massage-prices", label: "Цены на массаж и SPA" },

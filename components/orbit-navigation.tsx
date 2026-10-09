@@ -6,7 +6,7 @@ import { SiteAnchor, SiteImg } from "@/components/site-elements";
 import { useState, type CSSProperties } from "react";
 import { usePathname } from "next/navigation";
 import { Pause, Play, MapPin, MessageCircle, Users, Heart, HandHeart, Sparkles } from "lucide-react";
-import { BOOKING_URL } from "@/lib/content";
+import { BOOKING_URL, TELEGRAM_CHANNEL_URL } from "@/lib/content";
 
 const sections = [
   { href: "/prices#massage-prices", label: "Цены на массаж и SPA", Icon: HandHeart },
@@ -30,6 +30,7 @@ export function OrbitNavigation() {
           {isHome ? <h1 className="orbit-logo">{logo}</h1> : <div className="orbit-logo">{logo}</div>}
           <p>Массаж и косметология<br />в Лобне</p>
           <SiteAnchor className="button" href={BOOKING_URL} target="_blank" rel="noreferrer">Онлайн-запись</SiteAnchor>
+          {isHome && <SiteAnchor className="orbit-channel" href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer">Канал клиники в Telegram ↗</SiteAnchor>}
           {isHome && <span className="orbit-instruction">Выберите интересующий вас раздел</span>}
         </div>
         <nav className="orbit-plane" aria-label="Разделы сайта">
@@ -47,6 +48,7 @@ export function OrbitNavigation() {
       </div>
       <div className="orbit-bottom site-container">
         <SiteAnchor className="button orbit-mobile-booking" href={BOOKING_URL} target="_blank" rel="noreferrer">Онлайн-запись</SiteAnchor>
+        {isHome && <SiteAnchor className="orbit-bottom-channel" href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer">Канал клиники в Telegram ↗</SiteAnchor>}
         <p>Лобня, Лобненский бульвар, 12</p>
         <button className="orbit-pause" type="button" onClick={() => setPaused(value => !value)} aria-pressed={paused}>
           {paused ? <Play size={16} aria-hidden="true" /> : <Pause size={16} aria-hidden="true" />}
