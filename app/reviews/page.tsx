@@ -2,7 +2,7 @@ import { SiteAnchor } from "@/components/site-elements";
 import type { Metadata } from "next";
 import { BookingBand, PageHero } from "@/components/shared";
 import { YandexReviewsWidget } from "@/components/yandex-reviews-widget";
-import { MAPS_URL, trustFacts } from "@/lib/content";
+import { MAPS_URL } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Отзывы",
@@ -22,15 +22,6 @@ export default function ReviewsPage() {
       >
         <SiteAnchor className="button button-outline" href={MAPS_URL} target="_blank" rel="noreferrer">Карточка в Яндексе</SiteAnchor>
       </PageHero>
-
-      <section className="trust-strip" aria-label="Рейтинг клиники">
-        {trustFacts.map((fact) => (
-          <div className="trust-item" key={fact.label}>
-            <strong>{fact.value}</strong>
-            <span>{fact.label}</span>
-          </div>
-        ))}
-      </section>
 
       <section className="site-container section-pad yandex-reviews-section">
         <div className="yandex-reviews-copy" data-reveal>

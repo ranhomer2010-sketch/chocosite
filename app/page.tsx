@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { SiteImage as Image } from "@/components/site-elements";
 import { BookingBand, TextLink } from "@/components/shared";
 import { YandexReviewsWidget } from "@/components/yandex-reviews-widget";
-import { MAPS_URL, trustFacts } from "@/lib/content";
+import { MAPS_URL } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Массаж и косметология в Лобне",
@@ -22,15 +22,6 @@ const popular = [
 export default function HomePage() {
   return (
     <>
-      <section className="trust-strip" aria-label="Рейтинг клиники">
-        {trustFacts.map((fact) => (
-          <div className="trust-item" key={fact.label}>
-            <strong>{fact.value}</strong>
-            <span>{fact.label}</span>
-          </div>
-        ))}
-      </section>
-
       <section className="site-container section-pad">
         <div className="section-heading" data-reveal>
           <h2>Выберите свое направление</h2>
@@ -117,10 +108,6 @@ export default function HomePage() {
           <div className="yandex-reviews-copy" data-reveal>
             <h2>Отзывы гостей в Яндексе</h2>
             <p>Виджет обновляется автоматически и показывает отзывы прямо из карточки клиники.</p>
-            <div className="yandex-rating">
-              <strong>5,0</strong>
-              <span>759 оценок<br />652 отзыва</span>
-            </div>
             <SiteAnchor className="text-link" href={MAPS_URL} target="_blank" rel="noreferrer">
               Открыть все отзывы
             </SiteAnchor>

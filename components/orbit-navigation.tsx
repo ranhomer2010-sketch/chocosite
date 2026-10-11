@@ -9,8 +9,8 @@ import { Pause, Play, MapPin, MessageCircle, Users, Heart, HandHeart, Sparkles }
 import { BOOKING_URL, TELEGRAM_CHANNEL_URL } from "@/lib/content";
 
 const sections = [
-  { href: "/prices#massage-prices", label: "Цены на массаж и SPA", Icon: HandHeart },
-  { href: "/prices#cosmetology-prices", label: "Цены на косметологию", Icon: Sparkles },
+  { href: "/massazh#prices-list", label: "Цены на массаж и SPA", Icon: HandHeart },
+  { href: "/kosmetologiya#prices-list", label: "Цены на косметологию", Icon: Sparkles },
   { href: "/specialists#content", label: "Специалисты", Icon: Users },
   { href: "/reviews#content", label: "Отзывы", Icon: MessageCircle },
   { href: "/contacts#content", label: "Контакты", Icon: MapPin },

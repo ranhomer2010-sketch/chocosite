@@ -14,8 +14,8 @@ export const SOLE_TRADER_INN = "771301697422";
 export const SOLE_TRADER_OGRNIP = "322774600431303";
 
 export const navigation = [
-  { href: "/prices#massage-prices", label: "Цены на массаж и SPA" },
-  { href: "/prices#cosmetology-prices", label: "Цены на косметологию" },
+  { href: "/massazh#prices-list", label: "Цены на массаж и SPA" },
+  { href: "/kosmetologiya#prices-list", label: "Цены на косметологию" },
   { href: "/specialists#content", label: "Специалисты" },
   { href: "/reviews#content", label: "Отзывы" },
   { href: "/contacts#content", label: "Контакты" },
@@ -152,10 +152,3 @@ export const cosmetologyGroups: PriceGroup[] = [
     ],
   },
 ];
-
-export const trustFacts = [
-  { value: "5,0", label: "рейтинг в Яндексе" },
-  { value: "759", label: "оценок гостей" },
-  { value: "652", label: "отзыва" },
-  { value: "2026", label: "Хорошее место" },
-] as const;
