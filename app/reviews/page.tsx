@@ -16,9 +16,9 @@ export default function ReviewsPage() {
         eyebrow="Отзывы гостей"
         title="Опыт, которым делятся"
         text="Здесь отображается официальный виджет Яндекса. Новые опубликованные отзывы появляются автоматически."
-        image="/images/spa-hero.webp"
-        imageAlt="Расслабляющий массаж"
-        position="center 38%"
+        image="/images/spa-back.webp"
+        imageAlt="SPA-процедура для спины"
+        position="center 44%"
       >
         <SiteAnchor className="button button-outline" href={MAPS_URL} target="_blank" rel="noreferrer">Карточка в Яндексе</SiteAnchor>
       </PageHero>

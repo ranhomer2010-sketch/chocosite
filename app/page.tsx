@@ -31,11 +31,11 @@ export default function HomePage() {
           <article className="category-card" data-reveal>
             <div className="category-media">
               <Image
-                src="/images/massage-ritual.webp"
-                alt="Массаж спины"
+                src="/images/manual-massage.webp"
+                alt="Мастер проводит массаж ноги в клинике ВШоколаде"
                 fill
                 sizes="(max-width: 980px) 100vw, 55vw"
-                style={{ objectPosition: "center 46%" }}
+                style={{ objectPosition: "center 52%" }}
               />
             </div>
             <div className="category-copy">
@@ -47,11 +47,11 @@ export default function HomePage() {
           <article className="category-card" data-reveal>
             <div className="category-media">
               <Image
-                src="/images/cosmetology.webp"
-                alt="Процедура ухода за лицом"
+                src="/images/face-care-session.webp"
+                alt="Косметолог наносит маску во время ухода за лицом"
                 fill
                 sizes="(max-width: 980px) 100vw, 45vw"
-                style={{ objectPosition: "center 34%" }}
+                style={{ objectPosition: "center 45%" }}
               />
             </div>
             <div className="category-copy">
@@ -75,11 +75,11 @@ export default function HomePage() {
         </div>
         <div className="editorial-media">
           <Image
-            src="/images/relax.webp"
-            alt="Отдых после процедуры"
+            src="/images/welcome-tea.webp"
+            alt="Чай и угощение для гостей клиники"
             fill
             sizes="(max-width: 980px) 100vw, 56vw"
-            style={{ objectPosition: "center 42%" }}
+            style={{ objectPosition: "center 56%" }}
           />
         </div>
       </section>

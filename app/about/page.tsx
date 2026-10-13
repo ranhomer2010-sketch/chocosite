@@ -23,9 +23,9 @@ export default function AboutPage() {
         eyebrow="О клинике"
         title="Пространство, в котором спокойно"
         text="ВШоколаде объединяет профессиональный уход, внимательный сервис и бережное отношение к вашему времени."
-        image="/images/relax.webp"
-        imageAlt="Спокойная атмосфера клиники"
-        position="center 28%"
+        image="/images/welcome-tea.webp"
+        imageAlt="Чай и угощение для гостей клиники ВШоколаде"
+        position="center 55%"
       >
         <SiteAnchor className="button button-outline" href="/contacts#content">Контакты</SiteAnchor>
       </PageHero>
@@ -42,11 +42,11 @@ export default function AboutPage() {
       <section className="site-container section-pad service-story">
         <div className="story-image">
           <Image
-            src="/images/face-massage.webp"
-            alt="Бережная процедура массажа лица"
+            src="/images/face-care-session.webp"
+            alt="Специалист проводит уход за лицом"
             fill
             sizes="(max-width: 980px) 100vw, 52vw"
-            style={{ objectPosition: "center 40%" }}
+            style={{ objectPosition: "center 46%" }}
           />
         </div>
         <div className="story-copy" data-reveal>

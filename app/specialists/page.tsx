@@ -42,9 +42,9 @@ export default function SpecialistsPage() {
         eyebrow="Команда"
         title="Люди, которым можно доверить отдых"
         text="Познакомьтесь с массажистами ВШоколаде. Выберите услугу и удобное время в онлайн-записи."
-        image="/images/face-massage.webp"
-        imageAlt="Специалист проводит массаж лица"
-        position="center 42%"
+        image="/images/head-massage.webp"
+        imageAlt="Массаж головы во время процедуры"
+        position="center 48%"
       >
         <SiteAnchor className="button button-outline" href="/reviews#content">Читать отзывы</SiteAnchor>
       </PageHero>

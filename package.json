@@ -6,8 +6,10 @@
   "engines": { "node": ">=22.13.0" },
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack && node scripts/prepare-pages.mjs",
-    "typecheck": "tsc --noEmit"
+    "build": "node scripts/clean-export.mjs && next build --webpack && node scripts/audit-static.mjs && node scripts/prepare-pages.mjs",
+    "build:ru": "node scripts/build-ru.mjs",
+    "typecheck": "tsc --noEmit",
+    "audit:static": "node scripts/audit-static.mjs"
   },
   "dependencies": {
     "clsx": "2.1.1",

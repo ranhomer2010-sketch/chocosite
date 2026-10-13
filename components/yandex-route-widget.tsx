@@ -79,7 +79,7 @@ export function YandexRouteWidget() {
             <div aria-live="polite" className="route-status">{pending ? "Разрешите доступ к геолокации в запросе браузера." : error || (origin ? "Координаты переданы. Яндекс строит маршрут на карте." : "")}</div>
             <SiteAnchor className="text-link" href={routeUrl} target="_blank" rel="noreferrer">{origin ? "Открыть маршрут в Яндекс Картах" : "Задать начало маршрута в Яндексе"}</SiteAnchor>
           </div>
-          <iframe className="route-map" key={origin ? routeParams?.toString() : "place"} src={routeParams ? `https://yandex.ru/map-widget/v1/?${routeParams}` : PLACE_WIDGET} title={origin ? "Маршрут до клиники ВШоколаде в Яндекс Картах" : "Клиника ВШоколаде на Яндекс Картах"} referrerPolicy="no-referrer" />
+          <iframe className="route-map" key={origin ? routeParams?.toString() : "place"} src={routeParams ? `https://yandex.ru/map-widget/v1/?${routeParams}` : PLACE_WIDGET} title={origin ? "Маршрут до клиники ВШоколаде в Яндекс Картах" : "Клиника ВШоколаде на Яндекс Картах"} loading="lazy" referrerPolicy="no-referrer" allow="geolocation 'none'; camera 'none'; microphone 'none'" />
         </div>
         <button className="consent-reset" type="button" onClick={() => { revokeGeo(); setAllowed(false); setMapConsent(false); }}>Закрыть карту и отозвать разрешения</button>
       </>}

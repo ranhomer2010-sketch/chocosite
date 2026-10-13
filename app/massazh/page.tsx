@@ -2,6 +2,7 @@ import { SiteAnchor } from "@/components/site-elements";
 import type { Metadata } from "next";
 import { BookingBand, PageHero } from "@/components/shared";
 import { PriceSwitcher } from "@/components/price-switcher";
+import { PhotoGallery } from "@/components/photo-gallery";
 import { massageGroups, subscriptions } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -26,13 +27,24 @@ export default function MassagePage() {
         eyebrow="Массаж и SPA"
         title="Тело помнит заботу"
         text="От мягкого расслабления до глубокой работы с мышцами. Формат и интенсивность подбираются индивидуально."
-        image="/images/massage-ritual.webp"
-        imageAlt="Массаж спины в клинике ВШоколаде"
-        position="center 44%"
+        image="/images/manual-massage.webp"
+        imageAlt="Мастер проводит массаж ноги в клинике ВШоколаде"
+        position="center 50%"
         pattern="flow"
       >
         <SiteAnchor className="button button-outline" href="#prices-list">Смотреть цены</SiteAnchor>
       </PageHero>
+
+      <PhotoGallery
+        eyebrow="В процессе"
+        title="Массаж в деталях"
+        photos={[
+          { src: "/images/spa-back.webp", alt: "Спина во время SPA-процедуры", caption: "Время для себя" },
+          { src: "/images/manual-massage.webp", alt: "Ручной массаж ноги", caption: "Ручной массаж" },
+          { src: "/images/body-device.webp", alt: "Аппаратная процедура для тела", caption: "Аппаратная работа с телом" },
+          { src: "/images/body-roller.webp", alt: "Работа аппаратом в зоне бедра", caption: "Работа с отдельными зонами" },
+        ]}
+      />
 
       <PriceSwitcher groups={groups} label="Разделы массажа и SPA" />
 

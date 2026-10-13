@@ -51,12 +51,12 @@ export default function ContactsPage() {
       </div>
       <div className="contact-image">
         <Image
-          src="/images/massage-ritual.webp"
-          alt="Кабинет массажа ВШоколаде"
+          src="/images/welcome-tea.webp"
+          alt="Чай и угощение в клинике ВШоколаде"
           fill
           priority
           sizes="(max-width: 980px) 100vw, 55vw"
-          style={{ objectPosition: "center 44%" }}
+          style={{ objectPosition: "center 55%" }}
         />
       </div>
     </section><YandexRouteWidget /></>

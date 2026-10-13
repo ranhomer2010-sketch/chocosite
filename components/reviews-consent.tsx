@@ -14,7 +14,7 @@ export function ReviewsConsent() {
     <div className="consented-widget">
       {allowed ? <>
         <div className="yandex-widget-shell">
-          <iframe className="yandex-widget-frame" src="https://yandex.ru/maps-reviews-widget/198231269692?comments" title="Отзывы о клинике ВШоколаде на Яндекс Картах" referrerPolicy="no-referrer" />
+          <iframe className="yandex-widget-frame" src="https://yandex.ru/maps-reviews-widget/198231269692?comments" title="Отзывы о клинике ВШоколаде на Яндекс Картах" loading="lazy" referrerPolicy="no-referrer" allow="geolocation 'none'; camera 'none'; microphone 'none'" />
           <SiteAnchor className="yandex-widget-link" href={MAPS_URL} target="_blank" rel="noreferrer">ВШоколаде на Яндекс Картах</SiteAnchor>
         </div>
         <button className="consent-reset" type="button" onClick={() => { setAllowed(false); setChecked(false); }}>Скрыть отзывы и отозвать разрешение</button>

@@ -15,7 +15,7 @@ const directions = [
     headline: "Оставьте напряжение за дверью",
     text: "Массаж тела и лица, SPA-ритуалы и абонементы. Посмотрите время и стоимость процедур, а затем выберите запись.",
     href: "/massazh#prices-list",
-    image: "/images/massage-ritual.webp",
+    image: "/images/spa-back.webp",
     imageAlt: "Массаж спины в клинике ВШоколаде",
   },
   {
@@ -25,8 +25,8 @@ const directions = [
     headline: "Начните с задачи кожи",
     text: "Чистка, пилинг, уход и инъекции. Посмотрите стоимость, затем обсудите выбор процедуры со специалистом.",
     href: "/kosmetologiya#prices-list",
-    image: "/images/cosmetology.webp",
-    imageAlt: "Процедура ухода за лицом в клинике ВШоколаде",
+    image: "/images/care-mask.webp",
+    imageAlt: "Маска для лица во время процедуры ухода",
   },
 ];
 

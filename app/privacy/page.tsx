@@ -7,6 +7,10 @@ import {
 } from "@/lib/content";
 import { METRICA_ID } from "@/lib/analytics";
 
+const hostingProvider = process.env.NEXT_PUBLIC_HOSTING_PROVIDER?.trim();
+const hostingRegion = process.env.NEXT_PUBLIC_HOSTING_REGION?.trim();
+const hostingLogRetention = process.env.NEXT_PUBLIC_HOSTING_LOG_RETENTION?.trim();
+
 export const metadata: Metadata = {
   title: "Политика обработки персональных данных",
   description: "Политика обработки персональных данных посетителей сайта клиники ВШоколаде.",
@@ -15,7 +19,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <article className="privacy-page">
-      <p className="eyebrow">Документы сайта · редакция от 9 октября 2026 года</p>
+      <p className="eyebrow">Документы сайта · редакция от 13 октября 2026 года</p>
       <h1>Политика обработки персональных данных</h1>
       <p className="lead">Здесь описана работа сайта клиники «ВШоколаде»: какие данные возникают при посещении, когда загружаются внешние сервисы и как обратиться по вопросам обработки. Согласие пациента при оказании медицинских услуг оформляется отдельно.</p>
 
@@ -41,14 +45,16 @@ export default function PrivacyPage() {
 
       <section id="third-parties">
         <h2>4. Внешние сервисы и размещение сайта</h2>
-        <p>Публичная версия сайта сейчас размещена на GitHub Pages. Хостинг обрабатывает сетевые запросы для доставки страниц; оператору нужно отдельно проверить условия обработки и место хранения его технических журналов при выборе постоянной площадки. Сайт не заявляет, что инфраструктура GitHub Pages находится в РФ.</p>
+        {hostingProvider && hostingRegion && hostingLogRetention
+          ? <p>Для доставки страниц сайт использует инфраструктуру {hostingProvider} в {hostingRegion}. При обращении к серверу хостинг обрабатывает IP-адрес и технические журналы. Срок хранения журналов: {hostingLogRetention}. Доступ и удаление регулируются договором с провайдером и внутренними документами оператора.</p>
+          : <p>Публичная демонстрационная версия сайта размещена на GitHub Pages. Хостинг фиксирует технические запросы посетителей; эта площадка не заявлена как российская инфраструктура для постоянной работы клиники. Перед запуском постоянного сайта место хранения журналов и условия обработки будут проверены и указаны здесь.</p>}
         <p>Карта и отзывы Яндекса загружаются после разрешения в каждом виджете. Переход к <SiteAnchor className="text-link" href={BOOKING_URL} target="_blank" rel="noreferrer">записи в YCLIENTS</SiteAnchor> открывает отдельный сайт; сведения, которые посетитель вводит там, обрабатываются по условиям формы записи. Telegram также открывается только по нажатию ссылки. До клика эти страницы и их встроенные формы не загружаются на данном сайте.</p>
-        <p>Провайдеры обрабатывают полученные ими данные по своим правилам: <SiteAnchor className="text-link" href="https://docs.github.com/ru/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">GitHub</SiteAnchor>, <SiteAnchor className="text-link" href="https://yandex.ru/legal/confidential/" target="_blank" rel="noreferrer">Яндекс</SiteAnchor>, <SiteAnchor className="text-link" href="https://www.telegram.org/privacy" target="_blank" rel="noreferrer">Telegram</SiteAnchor>. Сведения о cookies и настройках собраны <SiteAnchor className="text-link" href="/cookies">здесь</SiteAnchor>.</p>
+        <p>Внешние сервисы обрабатывают полученные ими данные по своим правилам: <SiteAnchor className="text-link" href="https://yandex.ru/legal/confidential/" target="_blank" rel="noreferrer">Яндекс</SiteAnchor>, <SiteAnchor className="text-link" href="https://www.telegram.org/privacy" target="_blank" rel="noreferrer">Telegram</SiteAnchor>. {hostingProvider && hostingRegion && hostingLogRetention ? null : <>Для демонстрационной версии действуют также <SiteAnchor className="text-link" href="https://docs.github.com/ru/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">правила GitHub</SiteAnchor>. </>}Сведения о cookies и настройках собраны <SiteAnchor className="text-link" href="/cookies">здесь</SiteAnchor>.</p>
       </section>
 
       <section id="retention">
         <h2>5. Сроки, отзыв и защита</h2>
-        <p>Отметки согласия для карты, отзывов и геолокации действуют в текущем открытом виджете и не сохраняются между посещениями. Координаты маршрута используются однократно в браузере и не отправляются на сервер сайта. {METRICA_ID ? "Решение о Метрике хранится в локальном хранилище браузера до изменения решения или очистки данных браузера." : "Решение об аналитике не сохраняется, поскольку счётчик пока не включён."} Сроки хранения технических журналов GitHub и данных внешних сервисов определяются их правилами и требуют проверки перед переносом сайта на постоянный хостинг.</p>
+        <p>Отметки согласия для карты, отзывов и геолокации действуют в текущем открытом виджете и не сохраняются между посещениями. Координаты маршрута используются однократно в браузере и не отправляются на сервер сайта. {METRICA_ID ? "Решение о Метрике хранится в локальном хранилище браузера до изменения решения или очистки данных браузера." : "Решение об аналитике не сохраняется, поскольку счётчик пока не включён."} Срок хранения журналов хостинга {hostingProvider && hostingRegion && hostingLogRetention ? `указан в разделе 4 (${hostingLogRetention})` : "будет уточнён для постоянного размещения"}. Сроки хранения данных внешних сервисов определяются их условиями.</p>
         <p>Виджет можно закрыть кнопкой под ним, а разрешение на геолокацию удалить в настройках браузера. Если Метрика включена, её разрешение можно изменить через «Настройки аналитики» в подвале. Отзыв не удаляет сведения, уже полученные сторонним сервисом. Вопросы, запросы на доступ, исправление или удаление данных можно направить по контактам в разделе 1. Технические меры сайта включают HTTPS и загрузку внешних виджетов только по выбору посетителя.</p>
       </section>
 

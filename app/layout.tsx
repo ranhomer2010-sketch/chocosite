@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 };
 
 const contentSecurityPolicy = METRICA_ID
-  ? "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' https://mc.yandex.ru https://mc.yandex.com https://yastatic.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://mc.yandex.ru https://mc.yandex.com; font-src 'self' data:; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com; frame-src https://yandex.ru https://www.yandex.ru"
-  : "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; frame-src https://yandex.ru https://www.yandex.ru";
+  ? "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; script-src 'self' 'unsafe-inline' https://mc.yandex.ru https://mc.yandex.com https://yastatic.net; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://mc.yandex.ru https://mc.yandex.com; font-src 'self'; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com; frame-src https://yandex.ru https://www.yandex.ru; worker-src 'none'; upgrade-insecure-requests"
+  : "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; script-src 'self' 'unsafe-inline'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://yandex.ru https://www.yandex.ru; worker-src 'none'; upgrade-insecure-requests";
 
 export default function RootLayout({
   children,
@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="ru">
       <head>
         <meta httpEquiv="Content-Security-Policy" content={contentSecurityPolicy} />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta name="referrer" content="no-referrer" />
       </head>
       <body>
         <SiteHeader />
