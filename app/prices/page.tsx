@@ -10,7 +10,6 @@ const directions = [
   {
     id: "massage-prices",
     title: "Цены на массаж и SPA",
-    headline: "Выберите время для себя",
     text: "Массаж тела и лица, SPA и абонементы.",
     href: "/massazh#prices-list",
     image: "/images/spa-back.webp",
@@ -19,7 +18,6 @@ const directions = [
   {
     id: "cosmetology-prices",
     title: "Цены на косметологию",
-    headline: "Начните с того, что беспокоит",
     text: "Чистка, пилинги, уход и инъекции.",
     href: "/kosmetologiya#prices-list",
     image: "/images/care-mask.webp",
@@ -39,7 +37,6 @@ export default function PricesPage() {
           <section className="price-direction" id={direction.id} key={direction.id}>
             <div className="price-direction-copy" data-reveal>
               <h2>{direction.title}</h2>
-              <h3>{direction.headline}</h3>
               <p>{direction.text}</p>
               <SiteAnchor className="button" href={direction.href}>Смотреть стоимость <span aria-hidden="true">↗</span></SiteAnchor>
             </div>

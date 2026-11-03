@@ -24,7 +24,7 @@ export default function HomePage() {
     <>
       <section className="site-container section-pad">
         <div className="section-heading" data-reveal>
-          <h2>Что вам сейчас нужно?</h2>
+          <h2>Наши услуги</h2>
         </div>
         <div className="category-grid">
           <article className="category-card" data-reveal>
@@ -65,11 +65,11 @@ export default function HomePage() {
       <section className="editorial-section">
         <div className="editorial-copy">
           <div data-reveal>
-            <h2>Время для себя</h2>
+            <h2>Узнайте о нас больше</h2>
             <p>
-              Массаж, косметология и чашка чая после процедуры. Лобня, Лобненский бульвар, 12.
+              Клиника массажа и косметологии в Лобне. Лобненский бульвар, 12.
             </p>
-            <TextLink href="/about#content">Узнать о клинике</TextLink>
+            <TextLink href="/about#content">О клинике</TextLink>
           </div>
         </div>
         <div className="editorial-media">
@@ -85,7 +85,7 @@ export default function HomePage() {
 
       <section className="site-container section-pad popular-layout">
         <div className="popular-intro" data-reveal>
-          <h2>С чего начать</h2>
+          <h2>Популярные процедуры</h2>
           <TextLink href="/prices#content">Смотреть все цены</TextLink>
         </div>
         <div className="popular-list">

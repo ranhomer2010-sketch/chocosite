@@ -62,7 +62,9 @@
   isolation: isolate;
   overflow: clip;
   scroll-margin-top: 74px;
-  background: radial-gradient(ellipse at 50% 30%, #fff9e9 0%, #f4ead6 49%, #dfc9a9 100%);
+  background:
+    radial-gradient(ellipse 51% 69% at 50% 40%, #fff9ec 0%, #f3e6d0 65%, rgba(243, 230, 208, 0) 100%),
+    radial-gradient(ellipse 92% 102% at 51% 33%, #d9bb92 0%, #b88b68 61%, #704630 100%);
 }
 .orbit-hero::before {
   content: "";
@@ -71,9 +73,9 @@
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 40% 62% at 50% 27%, rgba(255, 255, 245, 0.8), transparent 72%),
-    linear-gradient(103deg, transparent 13%, rgba(105, 65, 39, 0.11) 13.1%, transparent 13.3%, transparent 86.7%, rgba(105, 65, 39, 0.11) 86.9%, transparent 87%),
-    radial-gradient(ellipse at 50% 45%, transparent 40%, rgba(83, 46, 27, 0.13) 100%);
+    radial-gradient(ellipse 33% 57% at 52% 23%, rgba(255, 253, 237, 0.82), transparent 75%),
+    linear-gradient(103deg, rgba(72, 38, 27, 0.19), transparent 19%, transparent 81%, rgba(72, 38, 27, 0.22)),
+    radial-gradient(ellipse at 50% 45%, transparent 40%, rgba(66, 35, 24, 0.24) 100%);
   animation: room-light 24s ease-in-out infinite alternate;
 }
 .orbit-hero::after {
@@ -82,7 +84,7 @@
   inset: 63% 0 0;
   z-index: -1;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(255, 250, 232, 0.04), rgba(102, 59, 35, 0.12));
+  background: linear-gradient(180deg, rgba(255, 248, 225, 0.03), rgba(69, 34, 23, 0.19));
   clip-path: polygon(50% 0, 100% 27%, 100% 100%, 0 100%, 0 27%);
 }
 @keyframes room-light {
@@ -124,7 +126,8 @@
 .orbit-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; padding-block: 8px 24px; font-size: 0.875rem; color: var(--muted); }
 @media (min-width: 761px) { .orbit-bottom { padding-right: clamp(350px, 29vw, 400px); } }
 .orbit-bottom p { margin: 0; }
-.orbit-pause { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 0; border: 0; background: transparent; color: var(--ink); font: inherit; cursor: pointer; }
+.orbit-bottom { color: #fff8e9; text-shadow: 0 1px 10px rgba(45, 23, 15, 0.5); }
+.orbit-pause { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 0; border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
 .orbit-bottom .orbit-mobile-booking { display: none; }
 .orbit-bottom-channel { display: none; }
 .orbit-stage.is-paused .orbit-position, .orbit-stage.is-paused .orbit-reverse { animation-play-state: paused; }
@@ -205,7 +208,10 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-  background: radial-gradient(ellipse at 8% 30%, rgba(226, 203, 163, 0.3), transparent 42%), var(--paper);
+  background:
+    radial-gradient(ellipse 67% 56% at 50% 25%, rgba(255, 250, 235, 0.96), transparent 100%),
+    radial-gradient(ellipse 70% 80% at 8% 70%, rgba(110, 65, 42, 0.16), transparent 100%),
+    linear-gradient(120deg, #ddc5a8, #f5eada 49%, #c7a482);
   color: var(--ink);
   font-family: var(--font-sans);
   font-size: 16px;
@@ -754,7 +760,9 @@ summary:focus-visible {
   display: grid;
   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
   min-height: 720px;
-  background: radial-gradient(ellipse at 10% 20%, #f4ebd5, transparent 60%), linear-gradient(145deg, #eadbbb, #d9c8a5);
+  background:
+    radial-gradient(ellipse 61% 74% at 24% 32%, #fff6e6, transparent 86%),
+    linear-gradient(110deg, #ab8062, #e6d0b1 38%, #c09b77 100%);
 }
 
 .editorial-copy {
@@ -864,7 +872,9 @@ summary:focus-visible {
 
 .reviews-feature {
   padding-block: clamp(76px, 9vw, 132px);
-  background: radial-gradient(ellipse at 16% 22%, #fff9ec, transparent 56%), linear-gradient(125deg, #f3e9d4, #e5d4b4);
+  background:
+    radial-gradient(ellipse 56% 80% at 34% 28%, #fff9ed, transparent 100%),
+    linear-gradient(120deg, #d4b18b, #efdfc7 50%, #b48762);
 }
 
 .reviews-grid {
@@ -1018,18 +1028,20 @@ summary:focus-visible {
   justify-content: center;
   padding: clamp(62px, 7vw, 112px) clamp(28px, 6vw, 96px);
   background: url("../public/images/orbit-arch.svg") no-repeat left center / 820px auto,
-    radial-gradient(ellipse at 30% 20%, #fff9eb, transparent 66%),
-    linear-gradient(125deg, #f4ebd8, #e3d2b4);
+    radial-gradient(ellipse 75% 73% at 37% 30%, #fff9ea, transparent 100%),
+    linear-gradient(120deg, #d9b896, #f0ddc3 48%, #b88e6d);
 }
 
-.page-hero-copy--flow { background-image: url("../public/images/flow-lines.svg"), radial-gradient(ellipse at 30% 20%, #fff9eb, transparent 66%), linear-gradient(125deg, #f4ebd8, #e3d2b4); }
+.page-hero-copy--flow { background-image: url("../public/images/flow-lines.svg"), radial-gradient(ellipse 75% 73% at 37% 30%, #fff9ea, transparent 100%), linear-gradient(120deg, #d9b896, #f0ddc3 48%, #b88e6d); }
 .page-hero-copy::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: linear-gradient(105deg, rgba(78, 44, 28, 0.10), transparent 17%, transparent 80%, rgba(78, 44, 28, 0.08));
+  background:
+    linear-gradient(105deg, rgba(74, 38, 25, 0.19), transparent 22%, transparent 81%, rgba(74, 38, 25, 0.21)),
+    linear-gradient(175deg, transparent 58%, rgba(111, 64, 42, 0.1));
 }
 .page-hero-media::after {
   content: "";
@@ -1075,11 +1087,11 @@ summary:focus-visible {
 .prices-heading { padding-block: clamp(44px, 6vw, 78px) 22px; }
 .prices-heading h1 { margin: 12px 0 0; font-family: var(--font-display); font-size: clamp(2.9rem, 5.8vw, 6rem); font-weight: 400; letter-spacing: -0.04em; line-height: 1.02; }
 .price-directions { display: grid; gap: 26px; }
-.price-direction { display: grid; grid-template-columns: 1.1fr 0.9fr; min-height: 480px; overflow: hidden; border-radius: 30px; background: var(--paper-strong); box-shadow: 0 20px 65px rgba(73,29,13,.09); scroll-margin-top: 92px; }
-.price-direction:nth-child(2) { grid-template-columns: 0.9fr 1.1fr; background: #eee0c3; }
+.price-direction { display: grid; grid-template-columns: 1.1fr 0.9fr; min-height: 480px; overflow: hidden; border-radius: 30px; background: #d7b794; box-shadow: 0 20px 65px rgba(73,29,13,.14); scroll-margin-top: 92px; }
+.price-direction:nth-child(2) { grid-template-columns: 0.9fr 1.1fr; background: #c9a480; }
 .price-direction:nth-child(2) .price-direction-copy { order: 2; }
-.price-direction-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(32px, 6vw, 80px); background: url("../public/images/orbit-arch.svg") no-repeat left center / 620px auto, radial-gradient(ellipse at 25% 20%, #fff9ea, transparent 70%); }
-.price-direction:nth-child(2) .price-direction-copy { background-image: url("../public/images/flow-lines.svg"), radial-gradient(ellipse at 25% 20%, #fff9ea, transparent 70%); }
+.price-direction-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(32px, 6vw, 80px); background: url("../public/images/orbit-arch.svg") no-repeat left center / 620px auto, radial-gradient(ellipse 80% 90% at 30% 28%, #fff8ea, transparent 100%), linear-gradient(120deg, #e4caab, #b68967); }
+.price-direction:nth-child(2) .price-direction-copy { background-image: url("../public/images/flow-lines.svg"), radial-gradient(ellipse 80% 90% at 30% 28%, #fff8ea, transparent 100%), linear-gradient(120deg, #e4caab, #b68967); }
 .price-direction-copy h2 { max-width: 11ch; margin: 18px 0 0; font-family: var(--font-display); font-size: clamp(2.8rem, 4.5vw, 5.2rem); font-weight: 400; letter-spacing: -0.04em; line-height: 1.04; }
 .price-direction-copy h3 { margin: 25px 0 0; font-size: clamp(1.15rem, 1.7vw, 1.5rem); font-weight: 700; line-height: 1.25; }
 .price-direction-copy p { max-width: 46ch; margin: 12px 0 28px; color: var(--muted); }

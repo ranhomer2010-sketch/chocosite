@@ -31,7 +31,7 @@ export function NavigationHint() {
 
   return visible ? (
     <div className="navigation-hint" role="status">
-      <span aria-hidden="true">↑</span> Навигационная орбита — наверху
+      <span aria-hidden="true">↑</span> Навигация наверху
     </div>
   ) : null;
 }

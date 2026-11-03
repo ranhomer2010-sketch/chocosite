@@ -8,7 +8,7 @@ export function FloatingBooking() {
   return (
     <aside className="floating-actions" aria-label="Быстрые действия">
       <div className="floating-secondary">
-        <SiteAnchor href="#navigation" aria-label="Вернуться к навигации"><ArrowUp size={17} aria-hidden="true" /><span className="action-full">К навигации</span><span className="action-short">Орбита</span></SiteAnchor>
+        <SiteAnchor href="#navigation" aria-label="Вернуться к навигации"><ArrowUp size={17} aria-hidden="true" /><span className="action-full">К навигации</span><span className="action-short">Навигация</span></SiteAnchor>
         <SiteAnchor href={TELEGRAM_CHAT_URL} target="_blank" rel="noreferrer" aria-label="Написать нам в Telegram"><Send size={17} aria-hidden="true" /><span className="action-full">Написать в ТГ</span><span className="action-short">ТГ</span></SiteAnchor>
       </div>
       <SiteAnchor className="floating-booking" href={BOOKING_URL} target="_blank" rel="noreferrer">

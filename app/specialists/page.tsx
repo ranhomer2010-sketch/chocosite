@@ -71,7 +71,7 @@ export default function SpecialistsPage() {
       <section className="site-container section-pad specialist-layout">
         <div className="specialist-intro" data-reveal>
           <h2>Как выбрать</h2>
-          <p>Не знаете, с чего начать? Выберите запрос.</p>
+          <p>Выберите направление.</p>
         </div>
         <div className="choice-list">
           {choices.map((choice) => (
