@@ -24,8 +24,7 @@ export default function HomePage() {
     <>
       <section className="site-container section-pad">
         <div className="section-heading" data-reveal>
-          <h2>Выберите свое направление</h2>
-          <p>От расслабляющего ритуала до программы ухода. Начать можно с понятной цели, остальное подскажут специалисты.</p>
+          <h2>Что вам сейчас нужно?</h2>
         </div>
         <div className="category-grid">
           <article className="category-card" data-reveal>
@@ -40,8 +39,8 @@ export default function HomePage() {
             </div>
             <div className="category-copy">
               <h3>Массаж и SPA</h3>
-              <p>Классические, расслабляющие, корректирующие и авторские техники.</p>
-              <SiteAnchor href="/massazh#content">Смотреть программы</SiteAnchor>
+              <p>Отдых, работа с мышцами, уход за телом.</p>
+              <SiteAnchor href="/massazh#content">Выбрать массаж</SiteAnchor>
             </div>
           </article>
           <article className="category-card" data-reveal>
@@ -56,8 +55,8 @@ export default function HomePage() {
             </div>
             <div className="category-copy">
               <h3>Косметология</h3>
-              <p>Эстетические и инъекционные процедуры с предварительной консультацией.</p>
-              <SiteAnchor href="/kosmetologiya#content">Выбрать процедуру</SiteAnchor>
+              <p>Уход, чистка, аппаратные и инъекционные процедуры.</p>
+              <SiteAnchor href="/kosmetologiya#content">Смотреть услуги</SiteAnchor>
             </div>
           </article>
         </div>
@@ -66,9 +65,9 @@ export default function HomePage() {
       <section className="editorial-section">
         <div className="editorial-copy">
           <div data-reveal>
-            <h2>Место, где не нужно торопиться</h2>
+            <h2>Время для себя</h2>
             <p>
-              ВШоколаде объединяет массаж и косметологию в одном пространстве. Спокойная атмосфера, внимательный сервис и время, которое действительно принадлежит вам.
+              Массаж, косметология и чашка чая после процедуры. Лобня, Лобненский бульвар, 12.
             </p>
             <TextLink href="/about#content">Узнать о клинике</TextLink>
           </div>
@@ -86,8 +85,7 @@ export default function HomePage() {
 
       <section className="site-container section-pad popular-layout">
         <div className="popular-intro" data-reveal>
-          <h2>Популярные процедуры</h2>
-          <p>Базовые варианты для первого знакомства. Полный прайс собран на отдельной странице.</p>
+          <h2>С чего начать</h2>
           <TextLink href="/prices#content">Смотреть все цены</TextLink>
         </div>
         <div className="popular-list">
@@ -106,8 +104,7 @@ export default function HomePage() {
       <section className="reviews-feature">
         <div className="site-container yandex-reviews-section">
           <div className="yandex-reviews-copy" data-reveal>
-            <h2>Отзывы гостей в Яндексе</h2>
-            <p>Виджет обновляется автоматически и показывает отзывы прямо из карточки клиники.</p>
+            <h2>Отзывы в Яндексе</h2>
             <SiteAnchor className="text-link" href={MAPS_URL} target="_blank" rel="noreferrer">
               Открыть все отзывы
             </SiteAnchor>

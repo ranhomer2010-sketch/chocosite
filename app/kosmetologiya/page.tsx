@@ -1,6 +1,6 @@
 import { SiteAnchor } from "@/components/site-elements";
 import type { Metadata } from "next";
-import { BookingBand, PageHero } from "@/components/shared";
+import { PageHero } from "@/components/shared";
 import { PriceSwitcher } from "@/components/price-switcher";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { cosmetologyGroups } from "@/lib/content";
@@ -15,8 +15,8 @@ export default function CosmetologyPage() {
     <>
       <PageHero
         eyebrow="Косметология"
-        title="Уход для вашей кожи"
-        text="Эстетические, аппаратные и инъекционные процедуры после очной оценки специалиста."
+        title="Уход под ваш запрос"
+        text="Чистка, уходы, аппаратные и инъекционные процедуры. Выбор обсудите со специалистом."
         image="/images/face-care-session.webp"
         imageAlt="Косметолог наносит маску во время ухода за лицом"
         position="center 48%"
@@ -25,21 +25,20 @@ export default function CosmetologyPage() {
       </PageHero>
 
       <PhotoGallery
-        eyebrow="В процессе"
-        title="Уход и косметология"
+        eyebrow="В кабинете"
+        title="Во время процедур"
         photos={[
           { src: "/images/face-care-session.webp", alt: "Специалист наносит маску для лица", caption: "Уход за лицом", position: "65% center" },
-          { src: "/images/care-mask.webp", alt: "Гостья с маской для лица", caption: "Время для кожи" },
+          { src: "/images/care-mask.webp", alt: "Гостья с маской для лица", caption: "Маска для лица" },
           { src: "/images/cosmetology-injection.webp", alt: "Инъекционная процедура в зоне лица", caption: "Инъекционные процедуры" },
           { src: "/images/lips-result.webp", alt: "Два кадра губ до и после косметологической процедуры", caption: "Пример результата" },
         ]}
-        note="На фото показан пример результата. Эффект зависит от индивидуальных особенностей; перед процедурой необходима консультация специалиста."
+        note="На фото — пример результата. Эффект индивидуален; нужна консультация специалиста."
       />
 
       <PriceSwitcher groups={cosmetologyGroups} label="Разделы косметологии" />
 
-      <p className="notice">Имеются противопоказания. Необходима консультация специалиста. Итоговая стоимость зависит от выбранного препарата и объема процедуры.</p>
-      <BookingBand title="Начните с консультации" text="Выберите прием врача-косметолога или подходящую процедуру в актуальном расписании." />
+      <p className="notice">Имеются противопоказания. Нужна консультация специалиста. Цена зависит от препарата и объёма процедуры.</p>
     </>
   );
 }

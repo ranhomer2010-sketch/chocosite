@@ -1,6 +1,5 @@
 import { SiteAnchor, SiteImage as Image } from "@/components/site-elements";
 import type { Metadata } from "next";
-import { BookingBand } from "@/components/shared";
 
 export const metadata: Metadata = {
   title: "Цены на массаж, SPA и косметологию",
@@ -10,20 +9,18 @@ export const metadata: Metadata = {
 const directions = [
   {
     id: "massage-prices",
-    number: "01 / массаж и SPA",
     title: "Цены на массаж и SPA",
-    headline: "Оставьте напряжение за дверью",
-    text: "Массаж тела и лица, SPA-ритуалы и абонементы. Посмотрите время и стоимость процедур, а затем выберите запись.",
+    headline: "Выберите время для себя",
+    text: "Массаж тела и лица, SPA и абонементы.",
     href: "/massazh#prices-list",
     image: "/images/spa-back.webp",
     imageAlt: "Массаж спины в клинике ВШоколаде",
   },
   {
     id: "cosmetology-prices",
-    number: "02 / косметология",
     title: "Цены на косметологию",
-    headline: "Начните с задачи кожи",
-    text: "Чистка, пилинг, уход и инъекции. Посмотрите стоимость, затем обсудите выбор процедуры со специалистом.",
+    headline: "Начните с того, что беспокоит",
+    text: "Чистка, пилинги, уход и инъекции.",
     href: "/kosmetologiya#prices-list",
     image: "/images/care-mask.webp",
     imageAlt: "Маска для лица во время процедуры ухода",
@@ -34,15 +31,13 @@ export default function PricesPage() {
   return (
     <>
       <div className="site-container prices-heading">
-        <span className="eyebrow">ВШоколаде / прайс</span>
-        <h1>Выберите направление</h1>
+        <h1>Цены</h1>
       </div>
 
       <div className="site-container price-directions">
         {directions.map((direction) => (
           <section className="price-direction" id={direction.id} key={direction.id}>
             <div className="price-direction-copy" data-reveal>
-              <span className="eyebrow">{direction.number}</span>
               <h2>{direction.title}</h2>
               <h3>{direction.headline}</h3>
               <p>{direction.text}</p>
@@ -55,8 +50,7 @@ export default function PricesPage() {
         ))}
       </div>
 
-      <p className="notice">Стоимость указана по предоставленному прайсу. Перед процедурой подтвердите цену и доступность времени в онлайн-записи.</p>
-      <BookingBand />
+      <p className="notice">Актуальные цены и свободное время — в онлайн-записи.</p>
     </>
   );
 }

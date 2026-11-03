@@ -1,6 +1,6 @@
 import { SiteAnchor } from "@/components/site-elements";
 import type { Metadata } from "next";
-import { BookingBand, PageHero } from "@/components/shared";
+import { PageHero } from "@/components/shared";
 import { YandexReviewsWidget } from "@/components/yandex-reviews-widget";
 import { MAPS_URL } from "@/lib/content";
 
@@ -14,8 +14,8 @@ export default function ReviewsPage() {
     <>
       <PageHero
         eyebrow="Отзывы гостей"
-        title="Опыт, которым делятся"
-        text="Здесь отображается официальный виджет Яндекса. Новые опубликованные отзывы появляются автоматически."
+        title="Что говорят гости"
+        text="Отзывы из карточки ВШоколаде в Яндекс Картах."
         image="/images/spa-back.webp"
         imageAlt="SPA-процедура для спины"
         position="center 44%"
@@ -25,14 +25,12 @@ export default function ReviewsPage() {
 
       <section className="site-container section-pad yandex-reviews-section">
         <div className="yandex-reviews-copy" data-reveal>
-          <h2>Отзывы из карточки ВШоколаде</h2>
-          <p>Источник, авторы и даты сохраняются внутри официального виджета Яндекс Карт.</p>
+          <h2>Отзывы в Яндексе</h2>
           <SiteAnchor className="text-link" href={MAPS_URL} target="_blank" rel="noreferrer">Открыть в Яндексе</SiteAnchor>
         </div>
         <YandexReviewsWidget />
       </section>
 
-      <BookingBand title="Составьте свое впечатление" text="Выберите процедуру и удобное время в актуальном расписании клиники." />
     </>
   );
 }

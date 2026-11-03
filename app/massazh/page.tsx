@@ -1,6 +1,6 @@
 import { SiteAnchor } from "@/components/site-elements";
 import type { Metadata } from "next";
-import { BookingBand, PageHero } from "@/components/shared";
+import { PageHero } from "@/components/shared";
 import { PriceSwitcher } from "@/components/price-switcher";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { massageGroups, subscriptions } from "@/lib/content";
@@ -15,7 +15,7 @@ const groups = [
   {
     id: "subscriptions",
     title: "Абонементы",
-    description: "Для регулярного ухода и курса процедур по более выгодной стоимости.",
+    description: "Сеансы и минуты для регулярных визитов.",
     items: subscriptions,
   },
 ];
@@ -25,8 +25,8 @@ export default function MassagePage() {
     <>
       <PageHero
         eyebrow="Массаж и SPA"
-        title="Тело помнит заботу"
-        text="От мягкого расслабления до глубокой работы с мышцами. Формат и интенсивность подбираются индивидуально."
+        title="Время расслабиться"
+        text="Выберите массаж или SPA. Интенсивность обсудите с мастером."
         image="/images/manual-massage.webp"
         imageAlt="Мастер проводит массаж ноги в клинике ВШоколаде"
         position="center 50%"
@@ -36,20 +36,19 @@ export default function MassagePage() {
       </PageHero>
 
       <PhotoGallery
-        eyebrow="В процессе"
-        title="Массаж в деталях"
+        eyebrow="В кабинете"
+        title="Массаж и SPA"
         photos={[
-          { src: "/images/spa-back.webp", alt: "Спина во время SPA-процедуры", caption: "Время для себя" },
+          { src: "/images/spa-back.webp", alt: "Спина во время SPA-процедуры", caption: "SPA" },
           { src: "/images/manual-massage.webp", alt: "Ручной массаж ноги", caption: "Ручной массаж" },
-          { src: "/images/body-device.webp", alt: "Аппаратная процедура для тела", caption: "Аппаратная работа с телом" },
-          { src: "/images/body-roller.webp", alt: "Работа аппаратом в зоне бедра", caption: "Работа с отдельными зонами" },
+          { src: "/images/body-device.webp", alt: "Аппаратная процедура для тела", caption: "Аппаратный массаж" },
+          { src: "/images/body-roller.webp", alt: "Работа аппаратом в зоне бедра", caption: "Проработка зон" },
         ]}
       />
 
       <PriceSwitcher groups={groups} label="Разделы массажа и SPA" />
 
-      <p className="notice">Стоимость указана по предоставленному прайс-листу. Актуальная цена и доступность времени подтверждаются в YCLIENTS.</p>
-      <BookingBand title="Подберите свой массаж" text="В онлайн-записи можно выбрать процедуру, специалиста и удобное время без звонка." />
+      <p className="notice">Актуальную цену и свободное время уточняйте при записи.</p>
     </>
   );
 }

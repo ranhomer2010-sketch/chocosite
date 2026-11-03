@@ -39,7 +39,7 @@ export const massageGroups: PriceGroup[] = [
   {
     id: "classic",
     title: "Классический массаж",
-    description: "Выберите зону и длительность вместе со специалистом.",
+    description: "Всё тело или отдельные зоны.",
     items: [
       { title: "Шейно-воротниковая зона", time: "30 мин", price: "2 000 ₽" },
       { title: "Спина или ноги", time: "45 мин", price: "2 900 ₽" },
@@ -51,7 +51,7 @@ export const massageGroups: PriceGroup[] = [
   {
     id: "spa",
     title: "Расслабляющий SPA-массаж",
-    description: "Ритуалы для глубокого отдыха и мягкого восстановления.",
+    description: "Отдых и восстановление.",
     items: [
       { title: "Расслабляющий SPA-массаж", time: "120 мин", price: "6 900 ₽" },
       { title: "Спортивный массаж", time: "75 мин", price: "4 200 ₽" },
@@ -66,7 +66,7 @@ export const massageGroups: PriceGroup[] = [
   {
     id: "body",
     title: "Коррекция силуэта",
-    description: "Ручные и аппаратные техники для работы с тонусом тела.",
+    description: "Ручные и аппаратные техники.",
     items: [
       { title: "Антицеллюлитный массаж: бока, ноги и живот", time: "60 мин", price: "3 600 ₽" },
       { title: "Антицеллюлитный массаж: живот и бока", time: "45 мин", price: "3 100 ₽" },
@@ -78,7 +78,7 @@ export const massageGroups: PriceGroup[] = [
   {
     id: "face",
     title: "Массаж лица",
-    description: "Техники для расслабления, тонуса и более свежего вида кожи.",
+    description: "Работа с мышцами лица, шеи и декольте.",
     items: [
       { title: "Скульптурный массаж лица", time: "60 мин", price: "4 000 ₽" },
       { title: "Хиромассаж лица, шеи и зоны декольте", time: "60 мин", price: "4 000 ₽" },
@@ -91,7 +91,7 @@ export const massageGroups: PriceGroup[] = [
 ];
 
 export const subscriptions: PriceItem[] = [
-  { title: "Все включено", time: "480 мин", price: "24 990 ₽", note: "Используйте минуты в удобном формате" },
+  { title: "Все включено", time: "480 мин", price: "24 990 ₽", note: "Минуты для разных процедур" },
   { title: "8 сеансов", time: "по 90 мин", price: "33 600 ₽" },
   { title: "5 сеансов", time: "по 90 мин", price: "20 990 ₽" },
   { title: "8 сеансов", time: "по 75 мин", price: "28 800 ₽" },
@@ -104,7 +104,7 @@ export const cosmetologyGroups: PriceGroup[] = [
   {
     id: "consultation",
     title: "Консультация",
-    description: "Начните с очной оценки состояния кожи и подбора процедур.",
+    description: "Оценка кожи и выбор процедуры.",
     items: [
       { title: "Прием врача-косметолога", time: "30 мин", price: "1 500 ₽" },
       { title: "Повторный прием врача-косметолога", time: "30 мин", price: "1 500 ₽" },
@@ -113,7 +113,7 @@ export const cosmetologyGroups: PriceGroup[] = [
   {
     id: "aesthetic",
     title: "Эстетическая косметология",
-    description: "Очищение, уходы и мягкие аппаратные методики.",
+    description: "Чистка, пилинги и аппаратные процедуры.",
     items: [
       { title: "Чистка лица", time: "90 мин", price: "4 800 ₽" },
       { title: "Чистка спины", time: "120 мин", price: "8 000 ₽" },
@@ -127,7 +127,7 @@ export const cosmetologyGroups: PriceGroup[] = [
   {
     id: "care",
     title: "Уход за лицом",
-    description: "Профессиональные протоколы Gernetic International.",
+    description: "Процедуры Gernetic International.",
     items: [
       { title: "Процедура Myo Myoso", price: "5 500 ₽" },
       { title: "Процедура Vasco", price: "5 500 ₽" },
@@ -137,7 +137,7 @@ export const cosmetologyGroups: PriceGroup[] = [
   {
     id: "injections",
     title: "Инъекционная косметология",
-    description: "Процедуры выполняются после консультации врача-косметолога.",
+    description: "После консультации врача-косметолога.",
     items: [
       { title: "Мезотерапия", price: "от 4 500 ₽" },
       { title: "Биоревитализация", price: "от 12 000 ₽" },

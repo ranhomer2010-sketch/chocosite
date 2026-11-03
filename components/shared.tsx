@@ -91,8 +91,8 @@ export function PriceGroupBlock({ group }: { group: PriceGroup }) {
 }
 
 export function BookingBand({
-  title = "Выберите удобное время",
-  text = "Актуальное расписание, специалисты и стоимость доступны в форме онлайн-записи.",
+  title = "Записаться",
+  text = "Выберите процедуру и время в YCLIENTS.",
 }: {
   title?: string;
   text?: string;

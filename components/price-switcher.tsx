@@ -29,9 +29,9 @@ export function PriceSwitcher({ groups, label }: { groups: PriceGroup[]; label: 
         <div className="price-panel" key={activeGroup.id}>
           <PriceGroupBlock group={activeGroup} />
           <div className="price-booking">
-            <p>Вы выбрали «{activeGroup.title}». В онлайн-записи уточните процедуру, специалиста и время.</p>
+            <p>Выберите мастера и время.</p>
             <SiteAnchor className="button" href={BOOKING_URL} target="_blank" rel="noreferrer">
-              Открыть онлайн-запись <span aria-hidden="true">↗</span>
+              Онлайн-запись <span aria-hidden="true">↗</span>
             </SiteAnchor>
           </div>
         </div>

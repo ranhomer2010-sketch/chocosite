@@ -21,7 +21,7 @@ export default function ContactsPage() {
     <><section className="contact-layout">
       <div className="contact-panel">
         <p className="eyebrow">Контакты</p>
-        <h1>Ждем вас в Лобне</h1>
+        <h1>Мы в Лобне</h1>
         <div className="contact-details">
           <section>
             <h2>Адрес</h2>
@@ -33,12 +33,12 @@ export default function ContactsPage() {
           </section>
           <section>
             <h2>Мессенджеры</h2>
-            <p>В Telegram и MAX можно написать на номер клиники: {PHONE_DISPLAY}</p>
+            <p>Telegram и MAX на номере клиники</p>
             <SiteAnchor className="text-link" href={TELEGRAM_CHAT_URL} target="_blank" rel="noreferrer">Написать в Telegram ↗</SiteAnchor>
           </section>
           <section>
             <h2>Режим работы</h2>
-            <p>Актуальные часы указаны в Яндекс Картах и YCLIENTS</p>
+            <p>Часы работы — в Яндекс Картах и YCLIENTS</p>
           </section>
         </div>
         <div className="hero-actions">

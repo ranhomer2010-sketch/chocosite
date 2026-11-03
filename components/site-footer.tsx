@@ -28,7 +28,7 @@ export function SiteFooter() {
               <small>массаж и косметология</small>
             </span>
           </SiteAnchor>
-          <p>Забота о теле и лице в спокойном пространстве в центре Лобни.</p>
+          <p>Массаж и косметология в Лобне.</p>
           <SiteAnchor className="button button-light" href={BOOKING_URL} target="_blank" rel="noreferrer">
             Онлайн-запись
           </SiteAnchor>

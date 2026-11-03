@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { title: "Один адрес", text: "Массаж и косметология в одном спокойном пространстве." },
-  { title: "Понятный выбор", text: "Специалист помогает подобрать процедуру под вашу задачу." },
-  { title: "Онлайн-запись", text: "Актуальное расписание и выбор мастера доступны в YCLIENTS." },
-  { title: "Удобный визит", text: "Парковка, оплата картой, Wi-Fi и подарочные сертификаты." },
+  { title: "В одном месте", text: "Массаж и косметология." },
+  { title: "По вашему запросу", text: "Процедуру поможет выбрать специалист." },
+  { title: "Запись без звонка", text: "Свободное время и мастера — в YCLIENTS." },
+  { title: "На месте", text: "Парковка, оплата картой, Wi-Fi и сертификаты." },
 ];
 
 export default function AboutPage() {
@@ -21,8 +21,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="О клинике"
-        title="Пространство, в котором спокойно"
-        text="ВШоколаде объединяет профессиональный уход, внимательный сервис и бережное отношение к вашему времени."
+        title="Здесь можно выдохнуть"
+        text="Массаж и косметология на Лобненском бульваре."
         image="/images/welcome-tea.webp"
         imageAlt="Чай и угощение для гостей клиники ВШоколаде"
         position="center 55%"
@@ -50,23 +50,23 @@ export default function AboutPage() {
           />
         </div>
         <div className="story-copy" data-reveal>
-          <h2>Забота складывается из деталей</h2>
-          <p>Начинаем с запроса, объясняем ход процедуры и оставляем достаточно времени на спокойный прием. Без спешки и лишних обещаний.</p>
+          <h2>Перед началом</h2>
+          <p>Расскажите, чего ждёте от процедуры. Специалист объяснит ход приёма и подберёт интенсивность.</p>
           <p>Клиника находится на первом этаже. Вход оборудован пандусом, часть пространства доступна для маломобильных гостей.</p>
-          <SiteAnchor className="text-link" href="/specialists#content">Как выбрать специалиста</SiteAnchor>
+          <SiteAnchor className="text-link" href="/specialists#content">Посмотреть мастеров</SiteAnchor>
         </div>
       </section>
 
       <section className="site-container about-connect" data-reveal>
-        <h2>Связь с клиникой</h2>
-        <p>Для записи и вопросов позвоните по номеру <SiteAnchor className="text-link" href={PHONE_HREF}>{PHONE_DISPLAY}</SiteAnchor> или напишите в Telegram на этот же номер. Новости и предложения публикуем в канале клиники.</p>
+        <h2>На связи</h2>
+        <p>Позвоните <SiteAnchor className="text-link" href={PHONE_HREF}>{PHONE_DISPLAY}</SiteAnchor> или напишите в Telegram. Новости — в канале клиники.</p>
         <div className="hero-actions">
           <SiteAnchor className="button button-outline" href={TELEGRAM_CHAT_URL} target="_blank" rel="noreferrer">Написать в Telegram</SiteAnchor>
           <SiteAnchor className="text-link" href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer">Канал ВШоколаде в Telegram ↗</SiteAnchor>
         </div>
       </section>
 
-      <BookingBand title="Познакомьтесь с ВШоколаде" text="Выберите первую процедуру и удобное время. Если сомневаетесь, начните с консультации." />
+      <BookingBand title="До встречи" text="Выберите процедуру и удобное время." />
     </>
   );
 }
