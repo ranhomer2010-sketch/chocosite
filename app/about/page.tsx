@@ -21,8 +21,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="О клинике"
-        title="Здесь можно выдохнуть"
-        text="Массаж и косметология на Лобненском бульваре."
+        title="Массаж и косметология в Лобне"
+        text="ВШоколаде, Лобненский бульвар, 12."
         image="/images/welcome-tea.webp"
         imageAlt="Чай и угощение для гостей клиники ВШоколаде"
         position="center 55%"

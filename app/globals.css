@@ -95,10 +95,11 @@
   scroll-margin-top: 74px;
   background-color: #ead5b8;
   background-image:
+    url("../public/images/cocoa-room.svg"),
     radial-gradient(ellipse 57% 42% at 50% 50%, rgba(255, 251, 238, 0.82), transparent 100%),
     linear-gradient(90deg, #be9777 0%, #e8d2b5 11%, #f6e9d4 49%, #e1c4a4 87%, #b28463 100%);
-  background-size: 100% max(900px, 100vh), 100% 100%;
-  background-repeat: repeat-y, no-repeat;
+  background-size: 100% max(900px, 100vh), 100% max(900px, 100vh), 100% 100%;
+  background-repeat: repeat-y, repeat-y, no-repeat;
 }
 .navigation-hint { position: fixed; z-index: 38; bottom: 22px; left: 50%; width: max-content; max-width: calc(100vw - 32px); padding: 13px 20px; transform: translateX(-50%); border: 1px solid rgba(255, 250, 248, 0.3); border-radius: 999px; background: var(--rose-dark); color: #fffaf8; box-shadow: 0 16px 38px rgba(73, 29, 13, 0.24); font-size: 0.9rem; text-align: center; pointer-events: none; animation: hint-appear 220ms var(--ease-out) both; }
 .navigation-hint span { margin-right: 5px; font-size: 1.1rem; }
@@ -769,6 +770,7 @@ summary:focus-visible {
   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
   min-height: 720px;
   background:
+    url("../public/images/cocoa-room.svg") center / 100% 100% no-repeat,
     radial-gradient(ellipse 61% 74% at 24% 32%, #fff6e6, transparent 86%),
     linear-gradient(110deg, #9d6c51, #e6d0b1 38%, #ad7e5e 100%);
 }
@@ -881,6 +883,7 @@ summary:focus-visible {
 .reviews-feature {
   padding-block: clamp(76px, 9vw, 132px);
   background:
+    url("../public/images/cocoa-room.svg") center / 100% 100% no-repeat,
     radial-gradient(ellipse 56% 80% at 34% 28%, #fff9ed, transparent 100%),
     linear-gradient(120deg, #b58b67, #efdfc7 50%, #9e7052);
 }
@@ -1038,11 +1041,12 @@ summary:focus-visible {
   justify-content: center;
   padding: clamp(62px, 7vw, 112px) clamp(28px, 6vw, 96px);
   background: url("../public/images/orbit-arch.svg") no-repeat left center / 820px auto,
+    url("../public/images/cocoa-room.svg") no-repeat center / 100% 100%,
     radial-gradient(ellipse 75% 73% at 37% 30%, #fff9ea, transparent 100%),
     linear-gradient(120deg, #d9b896, #f0ddc3 48%, #b88e6d);
 }
 
-.page-hero-copy--flow { background-image: url("../public/images/flow-lines.svg"), radial-gradient(ellipse 75% 73% at 37% 30%, #fff9ea, transparent 100%), linear-gradient(120deg, #d9b896, #f0ddc3 48%, #b88e6d); }
+.page-hero-copy--flow { background-image: url("../public/images/flow-lines.svg"), url("../public/images/cocoa-room.svg"), radial-gradient(ellipse 75% 73% at 37% 30%, #fff9ea, transparent 100%), linear-gradient(120deg, #d9b896, #f0ddc3 48%, #b88e6d); }
 .page-hero-copy::before {
   content: "";
   position: absolute;
@@ -1529,6 +1533,7 @@ summary:focus-visible {
   justify-content: center;
   padding: clamp(54px, 7vw, 108px);
   background:
+    url("../public/images/cocoa-room.svg") center / 100% 100% no-repeat,
     radial-gradient(ellipse 75% 80% at 35% 30%, #fff9ea, transparent 100%),
     linear-gradient(105deg, #b78b69, #ead6b9 55%, #a97656);
   box-shadow: inset -32px 0 55px rgba(72, 38, 24, 0.12);
