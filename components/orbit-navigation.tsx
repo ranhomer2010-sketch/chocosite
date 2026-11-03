@@ -31,7 +31,6 @@ export function OrbitNavigation() {
           <p>Профессиональный Массаж<br />и Лицензированная Косметология<br />в Лобне</p>
           <SiteAnchor className="button" href={BOOKING_URL} target="_blank" rel="noreferrer">Онлайн-запись</SiteAnchor>
           {isHome && <SiteAnchor className="orbit-channel" href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer">Канал клиники в Telegram ↗</SiteAnchor>}
-          {isHome && <span className="orbit-instruction">Выберите интересующий вас раздел</span>}
         </div>
         <nav className="orbit-plane" aria-label="Разделы сайта">
           {sections.map(({ href, label, Icon }, index) => (
@@ -46,6 +45,7 @@ export function OrbitNavigation() {
           ))}
         </nav>
       </div>
+      {isHome && <span className="orbit-instruction">Выберите интересующий вас раздел</span>}
       <div className="orbit-bottom site-container">
         <SiteAnchor className="button orbit-mobile-booking" href={BOOKING_URL} target="_blank" rel="noreferrer">Онлайн-запись</SiteAnchor>
         {isHome && <SiteAnchor className="orbit-bottom-channel" href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer">Канал клиники в Telegram ↗</SiteAnchor>}

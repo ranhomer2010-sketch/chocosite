@@ -1,2 +1,2 @@
-:HL["/chocosite/_next/static/css/8a8c0143552e7834.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"prices","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"KJftsuDGU78O4vaeRhw3x"}
+:HL["/chocosite/_next/static/css/81d3872e5f1d2f86.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"prices","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"3hfXW-Vh6e_1UYoDekwwZ"}

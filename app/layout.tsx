@@ -39,6 +39,7 @@ export default function RootLayout({
         <meta name="referrer" content="no-referrer" />
       </head>
       <body>
+        <div className="cocoa-space" aria-hidden="true" />
         <SiteHeader />
         <main><OrbitNavigation /><div id="content" className="page-content-anchor">{children}</div></main>
         <ScrollReveals />
