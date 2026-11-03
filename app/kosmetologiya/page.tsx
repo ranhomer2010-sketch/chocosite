@@ -15,7 +15,8 @@ export default function CosmetologyPage() {
     <>
       <PageHero
         eyebrow="Косметология"
-        title="Уход под ваш запрос"
+        title="Уход квалифицированных специалистов"
+        compactTitle
         text="Чистка, уходы, аппаратные и инъекционные процедуры. Выбор обсудите со специалистом."
         image="/images/face-care-session.webp"
         imageAlt="Косметолог наносит маску во время ухода за лицом"

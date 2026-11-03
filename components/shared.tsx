@@ -28,6 +28,7 @@ export function PageHero({
   children,
   position = "center",
   pattern = "orbit",
+  compactTitle = false,
 }: {
   eyebrow?: string;
   title: string;
@@ -37,12 +38,13 @@ export function PageHero({
   children?: ReactNode;
   position?: string;
   pattern?: "orbit" | "flow";
+  compactTitle?: boolean;
 }) {
   return (
     <section className="page-hero">
       <div className={`page-hero-copy page-hero-copy--${pattern}`}>
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-        <h1>{title}</h1>
+        <h1 className={compactTitle ? "page-hero-title-compact" : undefined}>{title}</h1>
         <p className="page-hero-text">{text}</p>
         <div className="hero-actions">
           <SiteAnchor className="button" href={BOOKING_URL} target="_blank" rel="noreferrer">
