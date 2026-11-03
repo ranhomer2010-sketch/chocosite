@@ -91,7 +91,15 @@
   from { transform: translate3d(-1.5%, 0, 0); opacity: 0.78; }
   to { transform: translate3d(1.5%, 0, 0); opacity: 1; }
 }
-.page-content-anchor { scroll-margin-top: 74px; }
+.page-content-anchor {
+  scroll-margin-top: 74px;
+  background-color: #ead5b8;
+  background-image:
+    radial-gradient(ellipse 57% 42% at 50% 50%, rgba(255, 251, 238, 0.82), transparent 100%),
+    linear-gradient(90deg, #be9777 0%, #e8d2b5 11%, #f6e9d4 49%, #e1c4a4 87%, #b28463 100%);
+  background-size: 100% max(900px, 100vh), 100% 100%;
+  background-repeat: repeat-y, no-repeat;
+}
 .navigation-hint { position: fixed; z-index: 38; bottom: 22px; left: 50%; width: max-content; max-width: calc(100vw - 32px); padding: 13px 20px; transform: translateX(-50%); border: 1px solid rgba(255, 250, 248, 0.3); border-radius: 999px; background: var(--rose-dark); color: #fffaf8; box-shadow: 0 16px 38px rgba(73, 29, 13, 0.24); font-size: 0.9rem; text-align: center; pointer-events: none; animation: hint-appear 220ms var(--ease-out) both; }
 .navigation-hint span { margin-right: 5px; font-size: 1.1rem; }
 @keyframes hint-appear { from { opacity: 0; translate: 0 10px; } to { opacity: 1; translate: 0 0; } }
@@ -701,7 +709,7 @@ summary:focus-visible {
   overflow: hidden;
   border-radius: 32px;
   background: var(--blush);
-  box-shadow: 0 20px 32px rgba(73, 29, 13, 0.09), 0 42px 80px rgba(73, 29, 13, 0.08);
+  box-shadow: 0 28px 45px rgba(73, 29, 13, 0.16), 0 50px 95px rgba(73, 29, 13, 0.13);
   transition: transform 220ms var(--ease-out), box-shadow 220ms ease;
 }
 
@@ -762,7 +770,7 @@ summary:focus-visible {
   min-height: 720px;
   background:
     radial-gradient(ellipse 61% 74% at 24% 32%, #fff6e6, transparent 86%),
-    linear-gradient(110deg, #ab8062, #e6d0b1 38%, #c09b77 100%);
+    linear-gradient(110deg, #9d6c51, #e6d0b1 38%, #ad7e5e 100%);
 }
 
 .editorial-copy {
@@ -874,7 +882,7 @@ summary:focus-visible {
   padding-block: clamp(76px, 9vw, 132px);
   background:
     radial-gradient(ellipse 56% 80% at 34% 28%, #fff9ed, transparent 100%),
-    linear-gradient(120deg, #d4b18b, #efdfc7 50%, #b48762);
+    linear-gradient(120deg, #b58b67, #efdfc7 50%, #9e7052);
 }
 
 .reviews-grid {
@@ -994,9 +1002,11 @@ summary:focus-visible {
   margin: clamp(72px, 10vw, 150px) auto;
   padding: clamp(38px, 6vw, 78px);
   border-radius: 32px;
-  background: var(--rose);
+  background:
+    radial-gradient(ellipse 65% 110% at 24% 17%, rgba(183, 124, 68, 0.42), transparent 82%),
+    linear-gradient(115deg, #4a2114 0%, #6d3823 54%, #36190f 100%);
   color: #fffaf8;
-  box-shadow: var(--soft-shadow);
+  box-shadow: inset 0 1px 0 rgba(255, 232, 190, 0.2), 0 34px 80px rgba(73, 29, 13, 0.28);
 }
 
 .booking-band > div {
@@ -1076,7 +1086,7 @@ summary:focus-visible {
 .photo-gallery-swipe { display: none; margin: 16px 0 0; color: var(--muted); font-size: 0.86rem; }
 .photo-gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.8vw, 24px); }
 .photo-gallery-item { min-width: 0; margin: 0; }
-.photo-gallery-media { position: relative; overflow: hidden; aspect-ratio: 4 / 5; border-radius: 22px; background: var(--paper-strong); }
+.photo-gallery-media { position: relative; overflow: hidden; aspect-ratio: 4 / 5; border-radius: 22px; background: var(--paper-strong); box-shadow: 0 20px 42px rgba(73, 29, 13, 0.17); }
 .photo-gallery-media img { object-fit: cover; transition: transform 600ms var(--ease-out); }
 .photo-gallery-item:hover .photo-gallery-media img { transform: scale(1.035); }
 .photo-gallery-item figcaption { padding: 13px 3px 0; font-size: 0.96rem; font-weight: 600; }
@@ -1232,12 +1242,14 @@ summary:focus-visible {
   justify-content: space-between;
   padding: 24px;
   border-radius: 24px;
-  background: var(--paper-strong);
+  border: 1px solid rgba(98, 43, 20, 0.12);
+  background: radial-gradient(ellipse at 25% 8%, #fff9eb, transparent 78%), linear-gradient(135deg, #f2e5cf, #ddc2a1);
+  box-shadow: inset 0 1px 0 rgba(255, 252, 239, 0.8), 0 14px 30px rgba(73, 29, 13, 0.12);
 }
 
 .price-row:nth-child(4n + 2),
 .price-row:nth-child(4n + 3) {
-  background: var(--blush);
+  background: radial-gradient(ellipse at 28% 12%, #f7e9d1, transparent 80%), linear-gradient(135deg, #e8d2af, #c9a279);
 }
 
 .price-row h3 {
@@ -1276,6 +1288,8 @@ summary:focus-visible {
   padding: 22px 28px;
   border: 1px solid var(--line);
   border-radius: 22px;
+  background: rgba(255, 249, 233, 0.63);
+  box-shadow: 0 12px 30px rgba(73, 29, 13, 0.09);
   color: var(--muted);
   font-size: 0.9rem;
   text-align: center;
@@ -1291,6 +1305,7 @@ summary:focus-visible {
 .story-image {
   min-height: 650px;
   border-radius: 32px;
+  box-shadow: 0 30px 65px rgba(73, 29, 13, 0.18);
 }
 
 .story-copy {
@@ -1338,6 +1353,9 @@ summary:focus-visible {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at 48% 12%, rgba(255, 250, 232, 0.73), transparent 82%),
+    linear-gradient(90deg, #c49c77, #f1dfc3 42%, #d1ac87);
 }
 
 .feature-rail article {
@@ -1390,12 +1408,13 @@ summary:focus-visible {
   justify-content: space-between;
   padding: clamp(26px, 3vw, 42px);
   border-radius: 26px;
-  background: var(--paper-strong);
+  background: radial-gradient(ellipse at 22% 12%, #fff7e6, transparent 83%), linear-gradient(135deg, #f2e3c9, #d7b692);
+  box-shadow: inset 0 1px 0 rgba(255, 252, 237, 0.7), 0 18px 38px rgba(73, 29, 13, 0.12);
   transition: transform 220ms var(--ease-out), box-shadow 220ms ease;
 }
 
-.team-card:nth-child(2) { background: var(--blush); }
-.team-card:nth-child(3) { background: var(--blush-deep); }
+.team-card:nth-child(2) { background: radial-gradient(ellipse at 20% 10%, #f7ead5, transparent 84%), linear-gradient(135deg, #e6caa7, #cba17a); }
+.team-card:nth-child(3) { background: radial-gradient(ellipse at 20% 10%, #f5e7ce, transparent 84%), linear-gradient(135deg, #dec09b, #bf906b); }
 
 .team-card-number,
 .team-experience {
@@ -1481,12 +1500,13 @@ summary:focus-visible {
   min-height: 320px;
   padding: clamp(28px, 4vw, 50px);
   border-radius: 28px;
-  background: var(--paper-strong);
+  background: radial-gradient(ellipse at 24% 10%, #fff9e9, transparent 86%), linear-gradient(135deg, #efddc2, #d5b08d);
+  box-shadow: 0 18px 40px rgba(73, 29, 13, 0.13);
 }
 
 .reviews-page-grid article:nth-child(3n + 1) {
   grid-column: span 2;
-  background: var(--blush);
+  background: radial-gradient(ellipse at 25% 10%, #f9ecd5, transparent 87%), linear-gradient(120deg, #e2c29d, #bd8e68);
 }
 
 .reviews-page-grid blockquote {
@@ -1508,7 +1528,10 @@ summary:focus-visible {
   flex-direction: column;
   justify-content: center;
   padding: clamp(54px, 7vw, 108px);
-  background: radial-gradient(ellipse at 15% 10%, #fff9e9, transparent 70%), linear-gradient(135deg, #f4ebd8, #e7d7b9);
+  background:
+    radial-gradient(ellipse 75% 80% at 35% 30%, #fff9ea, transparent 100%),
+    linear-gradient(105deg, #b78b69, #ead6b9 55%, #a97656);
+  box-shadow: inset -32px 0 55px rgba(72, 38, 24, 0.12);
 }
 
 .contact-details {
@@ -1587,14 +1610,16 @@ summary:focus-visible {
 
 .privacy-page .eyebrow { color: var(--rose-dark); }
 .privacy-page .text-link { overflow-wrap: anywhere; }
-.about-connect { margin-bottom: clamp(60px, 8vw, 100px); padding: clamp(28px, 4vw, 48px); border: 1px solid var(--line); border-radius: 18px; background: var(--paper-strong); }
+.about-connect { margin-bottom: clamp(60px, 8vw, 100px); padding: clamp(28px, 4vw, 48px); border: 1px solid var(--line); border-radius: 18px; background: radial-gradient(ellipse at 28% 12%, #fff9e8, transparent 86%), linear-gradient(125deg, #e9d4b3, #bd9270); box-shadow: 0 20px 45px rgba(73, 29, 13, 0.13); }
 .about-connect h2 { margin: 0 0 14px; font-family: var(--font-display); font-size: clamp(2rem, 3vw, 3rem); font-weight: 400; }
 .about-connect p { max-width: 70ch; color: var(--muted); }
 .about-connect .hero-actions { margin-top: 22px; align-items: center; }
 
 .site-footer {
   padding-top: 70px;
-  background: var(--blush-deep);
+  background:
+    radial-gradient(ellipse 60% 90% at 48% 15%, rgba(255, 249, 227, 0.6), transparent 100%),
+    linear-gradient(95deg, #b88f70, #e2cba9 43%, #ba8f6d);
 }
 
 .footer-grid {
