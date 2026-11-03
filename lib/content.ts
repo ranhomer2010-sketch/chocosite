@@ -50,8 +50,8 @@ export const massageGroups: PriceGroup[] = [
   },
   {
     id: "spa",
-    title: "Расслабляющий SPA-массаж",
-    description: "Отдых и восстановление.",
+    title: "Массаж и SPA",
+    description: "Расслабляющие, спортивные и авторские техники.",
     items: [
       { title: "Расслабляющий SPA-массаж", time: "120 мин", price: "6 900 ₽" },
       { title: "Спортивный массаж", time: "75 мин", price: "4 200 ₽" },

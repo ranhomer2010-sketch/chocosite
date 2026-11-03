@@ -37,7 +37,7 @@ export default function MassagePage() {
 
       <PhotoGallery
         eyebrow="В кабинете"
-        title="Массаж и SPA"
+        title="Как проходят сеансы"
         photos={[
           { src: "/images/spa-back.webp", alt: "Спина во время SPA-процедуры", caption: "SPA" },
           { src: "/images/manual-massage.webp", alt: "Ручной массаж ноги", caption: "Ручной массаж" },

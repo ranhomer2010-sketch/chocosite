@@ -31,7 +31,7 @@ export default function PricesPage() {
   return (
     <>
       <div className="site-container prices-heading">
-        <h1>Цены</h1>
+        <h1>Выберите направление</h1>
       </div>
 
       <div className="site-container price-directions">
