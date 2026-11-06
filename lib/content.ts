@@ -16,9 +16,11 @@ export const SOLE_TRADER_OGRNIP = "322774600431303";
 export const navigation = [
   { href: "/massazh#prices-list", label: "Цены на массаж и SPA" },
   { href: "/kosmetologiya#prices-list", label: "Цены на косметологию" },
+  { href: "/about", label: "О клинике" },
   { href: "/specialists#content", label: "Специалисты" },
   { href: "/reviews#content", label: "Отзывы" },
   { href: "/contacts#content", label: "Контакты" },
+  { href: "/legal", label: "Правовая информация" },
 ] as const;
 
 export type PriceItem = {

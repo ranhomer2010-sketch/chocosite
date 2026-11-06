@@ -3,9 +3,7 @@ import type { Metadata } from "next";
 import { FloatingBooking } from "@/components/shared";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { OrbitNavigation } from "@/components/orbit-navigation";
 import { ScrollReveals } from "@/components/scroll-reveals";
-import { NavigationHint } from "@/components/navigation-hint";
 import { AnalyticsConsent } from "@/components/analytics-consent";
 import { METRICA_ID } from "@/lib/analytics";
 import "./globals.css";
@@ -41,9 +39,8 @@ export default function RootLayout({
       <body>
         <div className="cocoa-space" aria-hidden="true" />
         <SiteHeader />
-        <main><OrbitNavigation /><div id="content" className="page-content-anchor">{children}</div></main>
+        <main id="content" className="page-content-anchor">{children}</main>
         <ScrollReveals />
-        <NavigationHint />
         <AnalyticsConsent />
         <SiteFooter />
         <FloatingBooking />

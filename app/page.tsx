@@ -1,9 +1,9 @@
 import { SiteAnchor } from "@/components/site-elements";
 import type { Metadata } from "next";
 import { SiteImage as Image } from "@/components/site-elements";
-import { BookingBand, TextLink } from "@/components/shared";
+import { BookingBand, PageHero, TextLink } from "@/components/shared";
 import { YandexReviewsWidget } from "@/components/yandex-reviews-widget";
-import { MAPS_URL } from "@/lib/content";
+import { MAPS_URL, TELEGRAM_CHANNEL_URL } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Массаж и косметология в Лобне",
@@ -22,6 +22,17 @@ const popular = [
 export default function HomePage() {
   return (
     <>
+      <PageHero
+        eyebrow="Клиника ВШоколаде · Лобня"
+        title="Массаж и косметология"
+        text="Профессиональный массаж, SPA и лицензированная косметология. Лобненский бульвар, 12."
+        image="/images/face-care-session.webp"
+        imageAlt="Уход за лицом в клинике ВШоколаде"
+        position="center 45%"
+      >
+        <SiteAnchor className="button button-outline" href="/prices">Услуги и цены</SiteAnchor>
+        <SiteAnchor className="hero-channel" href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer">Канал клиники в Telegram ↗</SiteAnchor>
+      </PageHero>
       <section className="site-container section-pad">
         <div className="section-heading" data-reveal>
           <h2>Наши услуги</h2>

@@ -4,7 +4,9 @@ export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "/chocosite";
 export function sitePath(path: string): string {
   if (!path.startsWith("/") || path.startsWith("//")) return path;
   if (BASE_PATH && (path === BASE_PATH || path.startsWith(`${BASE_PATH}/`))) return path;
-  const [pathname, suffix = ""] = path.split(/(?=[?#])/, 2);
+  const suffixIndex = path.search(/[?#]/);
+  const pathname = suffixIndex < 0 ? path : path.slice(0, suffixIndex);
+  const suffix = suffixIndex < 0 ? "" : path.slice(suffixIndex);
   const normalized = pathname.endsWith("/") || /\.[^/]+$/.test(pathname)
     ? pathname : `${pathname}/`;
   return `${BASE_PATH}${normalized}${suffix}`;

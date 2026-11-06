@@ -1,12 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SiteAnchor } from "@/components/site-elements";
 import { PriceGroupBlock } from "@/components/shared";
 import { BOOKING_URL, type PriceGroup } from "@/lib/content";
 
 export function PriceSwitcher({ groups, label }: { groups: PriceGroup[]; label: string }) {
   const [activeId, setActiveId] = useState(groups[0].id);
+  useEffect(() => {
+    const category = new URLSearchParams(window.location.search).get("category");
+    if (category && groups.some(group => group.id === category)) setActiveId(category);
+  }, [groups]);
   const activeGroup = groups.find((group) => group.id === activeId) ?? groups[0];
 
   return (

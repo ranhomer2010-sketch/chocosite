@@ -38,7 +38,7 @@ export default function ContactsPage() {
           </section>
           <section>
             <h2>Режим работы</h2>
-            <p>Часы работы — в Яндекс Картах и YCLIENTS</p>
+            <p>Ежедневно с 10:00 до 21:30</p>
           </section>
         </div>
         <div className="hero-actions">

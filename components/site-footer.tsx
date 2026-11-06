@@ -42,7 +42,8 @@ export function SiteFooter() {
                 {item.label}
               </SiteAnchor>
             ))}
-            <SiteAnchor href="/about#content">О клинике</SiteAnchor>
+            <SiteAnchor href="/site-map">Карта сайта</SiteAnchor>
+            <SiteAnchor href="/search">Поиск по сайту</SiteAnchor>
           </div>
         </div>
 
@@ -59,12 +60,13 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="site-container footer-legal" aria-label="Реквизиты исполнителей">
-        <p><strong>{COMPANY_NAME}</strong> · ИНН {COMPANY_INN} · ОГРН {COMPANY_OGRN}<br /><span>Медицинская деятельность по лицензии № Л041-01162-50/04066667.</span></p>
+        <p><strong>{COMPANY_NAME}</strong> · ИНН {COMPANY_INN} · ОГРН {COMPANY_OGRN}<br /><span>Лицензия № Л041-01162-50/04066667 от 24.12.2025. Выдана Министерством здравоохранения Московской области.</span></p>
         <p><strong>{SOLE_TRADER_NAME}</strong> · ИНН {SOLE_TRADER_INN} · ОГРНИП {SOLE_TRADER_OGRNIP}<br /><span>Исполнитель услуги указывается при записи и в договоре.</span></p>
       </div>
       <div className="site-container footer-bottom">
         <span>© {new Date().getFullYear()} ВШоколаде</span>
         <div className="footer-policy-links">
+          <SiteAnchor href="/legal">Правовая информация</SiteAnchor>
           <SiteAnchor href="/privacy">Политика обработки данных</SiteAnchor>
           <SiteAnchor href="/consent">Согласия</SiteAnchor>
           <SiteAnchor href="/cookies">Cookies</SiteAnchor>
